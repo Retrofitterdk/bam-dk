@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Dagens Medicin</title>
+	<meta name="description" content="Lorem ipsum">
+
+	
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6196712/783386/css/fonts.css" />
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	
+
+	
+
+	<link rel="stylesheet" href="css/main.css">
+
+	
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/oldie.css" />
+	<![endif]-->
+	
+
+	<link rel="canonical" href="/dagensmedicin/styleguide.html">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	
+	<!-- olika Adtoma scripts beroende på stage eller live -->
+	<!-- STAGE: -->
+	<script type="text/javascript" src="//bn-01.adtomafusion.com:80/script.js"></script>
+	<!-- LIVE:
+		<script type="text/javascript" src="//fusion.dagensmedicin.se/script.js"></script>
+	-->
+
+	<script type="text/javascript">
+		var staticAssets = '/Static/';
+
+		// Adtoma layouts som gäller för hela siten
+		if (typeof window.Fusion != 'undefined') {
+			var adtomaLayouts = {
+				mobile: 'dm_mob_main',
+				desktop: 'dm_layout_main'
+			};
+
+			// mediaZone beroende på vilken avdelning av siten man är på
+			var adtomaMediazones = {
+				mobile: 'bbm.dagens_medicin.mobil.start',
+				desktop: 'bbm.dagens_medicin.start'
+			};
+
+			// adServer skall sättas beroende på om det är stage eller live
+			window.Fusion.adServer = "bn-01.adtomafusion.com:80";// STAGE
+			//window.Fusion.adServer = "fusion.bbm.se";			 // LIVE
+
+			window.Fusion.usepostscribe = true;
+			window.Fusion.usecheckads = false;
+		}
+	</script>
+	
+</head>
+
+	<body>
+		<form class="emulating-episerver-wrapper-form">
+			
+
+			<script>(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.0";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<header>
+	
+
+	
+		<div class="header-top-bar mobile-hidden">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col text">
+						<p class="header-text">
+							Den här sajten är bara till för dig som arbetar i
+							hälso- och sjukvården.
+						</p>
+					</div>
+					<div class="col list">
+						<ul class="header-list">
+							<li><a href="#">Dagens Apotek</a></li>
+							<li><a href="#">underlakare.se</a></li>
+							<li><a href="#">It i vården</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-big-add">
+			<div class="module-banner no-aspect-ratio">
+				<img src="http://placehold.it/1100x210" alt="">
+			</div>
+		</div>
+	
+
+	<div class="header-meta-bar mobile-hidden">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<ul class="header-list">
+						<li><a href="#">Kontakt</a></li>
+						<li><a href="#">Prenumerera</a></li>
+						<li><a href="#">Annonsera</a></li>
+						
+							<li><a href="#" class="btn blue gradient">Lediga jobb</a></li>
+						
+						<li>
+							
+								<a href="#" class="btn blue gradient" data-toggle-active=".widget-user">Logga in</a>
+							
+
+
+							
+								<div class="widget-user widget-user-login">
+									<div class="wrapper">
+										<div class="form">
+											<div class="row">
+												<div class="col error">
+													<label class="label">E-postadress:</label>
+													<input type="text">
+													<div class="message">OBS!</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<label class="label">Lösenord:</label>
+													<input type="email" placeholder="">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<label class="label"><input type="checkbox"> Kom ihåg mig</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<a href="#" class="btn btn-big gradient ">Logga in</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<a href="#" class="link inverted">Skapa användare</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<a href="#" class="link inverted">Glömt lösenordet?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-menu">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<a href="#" class="header-menu-logo site-logo">Dagens Medicin</a>
+					<button class="header-menu-toggle desktop-hidden"><div>Menu</div></button>
+
+					
+						<ul class="header-menu-list header-list" data-hide-delay="500">
+							<li data-menu="opinion">
+									<button class="btn-menu">Opinion</button>
+									<!-- OPINION SUBMENU -->
+									<div class="header-submenu" id="opinion">
+										<!-- OPINION SUBMENU-CATEGORIES -->
+										<div class="header-submenu-categories">
+											<div class="wrapper">
+												<ul class="header-submenu-list">
+													<li><a href="#">Allmänmedicin</a></li>
+													<li><a href="#">Barnsjukvård</a></li>
+													<li><a href="#">Cancer</a></li>
+													<li><a href="#">Diabetes</a></li>
+													<li><a href="#">Hjärta-kärl</a></li>
+													<li><a href="#">Infektion</a></li>
+													<li><a href="#">Kirurgi</a></li>
+													<li><a href="#">Kvinnohälsa</a></li>
+													<li><a href="#">Luftvägarna</a></li>
+													<li><a href="#">Medicinsk teknik</a></li>
+													<li><a href="#" class="blue">Neurologi</a></li>
+													<li><a href="#" class="blue">Psykiatri</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- OPINION SUBMENU-TEASER -->
+										<div class="header-submenu-teaser mobile-hidden">
+											<div class="wrapper">
+												<p class="header-title uppercase">Populärt just nu</p>
+												<ul class="header-submenu-list">
+													<li>
+														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+															<p class="header-teaser-title uppercase">
+																Barnsjukvård
+															</p>
+															<p class="header-teaser-text">
+																Dockpraktik gör det	okej att gå på toa
+															</p>
+														</a>
+													</li>
+													<li>
+														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+															<p class="header-teaser-title uppercase">
+																Barnsjukvård
+															</p>
+															<p class="header-teaser-text">
+																Dockpraktik gör det	okej att gå på toa
+															</p>
+														</a>
+													</li>
+													<li>
+														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+															<p class="header-teaser-title uppercase">
+																Barnsjukvård
+															</p>
+															<p class="header-teaser-text">
+																Dockpraktik gör det	okej att gå på toa
+															</p>
+														</a>
+													</li>
+													<li>
+														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+															<p class="header-teaser-title uppercase">
+																Barnsjukvård
+															</p>
+															<p class="header-teaser-text">
+																Dockpraktik gör det	okej att gå på toa
+															</p>
+														</a>
+													</li>
+													<li>
+														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+															<p class="header-teaser-title uppercase">
+																Barnsjukvård
+															</p>
+															<p class="header-teaser-text">
+																Dockpraktik gör det	okej att gå på toa
+															</p>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+							</li>
+							<li data-menu="event">
+								<button class="btn-menu">Event</button>
+								<!-- EVENT SUBMENU -->
+								<div class="header-submenu" id="event">
+									<!-- EVENT SUBMENU-CATEGORIES -->
+									<div class="header-submenu-categories">
+										<div class="wrapper">
+											<ul class="header-submenu-list header-submenu-list-compact">
+												<li><a href="#">Evensmod asdasdt 1</a></li>
+												<li><a href="#">Event 2</a></li>
+												<li><a href="#">Event 3</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- EVENT SUBMENU-TEASER -->
+									<div class="header-submenu-teaser mobile-hidden">
+										<div class="wrapper">
+											<p class="header-title uppercase">Populärt just nu</p>
+											<ul class="header-submenu-list">
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-menu="specializations">
+								<button class="btn-menu">Specialistområden</button>
+								<!-- SPECIALIZATIONS SUBMENU -->
+								<div class="header-submenu" id="specializations">
+									<!-- SPECIALIZATIONS SUBMENU-CATEGORIES -->
+									<div class="header-submenu-categories">
+										<div class="wrapper">
+											<ul class="header-submenu-list">
+												<li><a href="#">Specialistområden 1</a></li>
+												<li><a href="#">Specialistområden 2</a></li>
+												<li><a href="#">Specialistområden 3</a></li>
+												<li><a href="#">Specialistområden 4</a></li>
+												<li><a href="#">Specialistområden 5</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- SPECIALIZATIONS SUBMENU-TEASER -->
+									<div class="header-submenu-teaser mobile-hidden">
+										<div class="wrapper">
+											<p class="header-title uppercase">Populärt just nu</p>
+											<ul class="header-submenu-list">
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-menu="more">
+								<button class="btn-menu">Mer</button>
+								<!-- MORE SUBMENU -->
+								<div class="header-submenu" id="more">
+									<!-- MORE SUBMENU-CATEGORIES -->
+									<div class="header-submenu-categories">
+										<div class="wrapper">
+											<ul class="header-submenu-list">
+												<li><a href="#">More 1</a></li>
+												<li><a href="#">More 2</a></li>
+												<li><a href="#">More 3</a></li>
+												<li><a href="#">More 4</a></li>
+												<li><a href="#">More 5</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- MORE SUBMENU-TEASER -->
+									<div class="header-submenu-teaser mobile-hidden">
+										<div class="wrapper">
+											<p class="header-title uppercase">Populärt just nu</p>
+											<ul class="header-submenu-list">
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+												<li>
+													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+														<p class="header-teaser-title uppercase">
+															Barnsjukvård
+														</p>
+														<p class="header-teaser-text">
+															Dockpraktik gör det	okej att gå på toa
+														</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-menu="search" class="header-search hidden-mobile">
+								<button class="btn-menu header-search-icon">Search</button>
+								<!-- SEARCH -->
+								<div class="header-submenu" id="search">
+									<!-- SEARCH FORM -->
+									<div class="wrapper">
+										<div class="form header-search-form">
+											<div class="row">
+												<div class="col form-inline form-big-input">
+													<input type="text" placeholder="Skriv sökord här...">
+													<button class="form-btn-white">Sök</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+			<div class="wrapper">
+	<h2>The grid</h2>
+	<div class="group-primary">
+		<img src="http://placehold.it/1440x450&text=.group-primary">
+	</div>
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="group-secondary">
+		<img src="http://placehold.it/1440x450&text=.group-secondary">
+	</div>
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+	<div class="group-secondary">
+		<img src="http://placehold.it/1440x450&text=.group-secondary">
+	</div>
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+		<img src="http://placehold.it/1440x450&text=.group-minor">
+	</div>
+	<div class="group-primary">
+		<img src="http://placehold.it/1440x450&text=.group-primary">
+	</div>
+</div>
+<div class="wrapper">
+	<h2>Typography</h2>
+	<div class="group-primary">
+		<h1 class="heading-section">Section headline</h1>
+		<h1 class="heading-section heading-underline"><span>Underline (span!)</span></h1>
+		<h1 class="heading-section heading-underline text-blue"><span>Underline (span!)</span></h1>
+		<h1 class="heading-article">Article headline</h1>
+		<h1 class="heading-featured-article">Featured article headline</h1>
+		<h1 class="huge">Huge Headline</h1>
+		<h1>First Level Header Size</h1>
+		<h2>Secondary Level Header Size</h2>
+		<h3>Third Level Header Size</h3>
+		<h4>Fourth Level Header Size</h4>
+		<p class="h4 serif">
+			<strong>Article preamble</strong>, tellus ac cursus commodo, tortor mauris 
+			condimentum nibh, ut fermentum massa justo sit amet risus. 
+			Cras mattis consectetur Donec sed odio dui.
+		</p>
+		<p>
+			Regular body enean eu leo quam. Pellentesque ornare sem 
+			lacinia quam venenatis vestibulum. Curabitur blandit 
+			tempus porttitor. Donec ullamcorper nulla non metus 
+			auctor fringilla. Vivamus sagittis lacus vel augue 
+			laoreet rutrum faucibus dolor auctor. Maecenas faucibus 
+			mollis interdum.
+		</p>
+		<p class="p-small">
+			Fourth level typography 2
+		</p>
+		<p class="p-smallest">
+			Fifth level typography
+		</p>
+	</div>
+</div>
+<div class="wrapper">
+	<h2>All purpose widgets</h2>
+	<div class="group-minor">
+
+		<div class="widget widget-free-text primary-color-1">
+	<p class="widget-title">Free text module</p>
+	
+	<div class="widget-text">
+		<p>
+			Praesent commodo cursus magna, vel scelerisque 
+			nisl consectetur et.
+		</p>
+		<p>
+			Maecenas faucibus mollis interdum. Fusce dapibus, 
+			tellus ac cursus commodo, tortor mauris condimentum 
+			nibh, ut fermentum massa justo sit amet risus. Cras 
+			mattis consectetur purus sit amet fermentum. Donec 
+			ullamcorper nulla non metus auctor fringilla. 
+			Praesent commodo cursus magna, vel scelerisque 
+			nisl consectetur et.
+		</p>
+	</div>
+</div>
+
+
+		<div class="widget widget-free-text primary-color-3">
+	<p class="widget-title">Free text module</p>
+	 <img src="http://placehold.it/800x450&text=image" alt="placeholder"> 
+	<div class="widget-text">
+		<p>
+			Praesent commodo cursus magna, vel scelerisque 
+			nisl consectetur et.
+		</p>
+		<p>
+			Maecenas faucibus mollis interdum. Fusce dapibus, 
+			tellus ac cursus commodo, tortor mauris condimentum 
+			nibh, ut fermentum massa justo sit amet risus. Cras 
+			mattis consectetur purus sit amet fermentum. Donec 
+			ullamcorper nulla non metus auctor fringilla. 
+			Praesent commodo cursus magna, vel scelerisque 
+			nisl consectetur et.
+		</p>
+	</div>
+</div>
+
+
+		<div class="widget widget-tag">
+	<a href="#">
+		<p class="widget-title">The tag</p>
+		<img src="http://placehold.it/800x480&text=image" />
+		<p class="widget-text">Taggmodul Egestas Justo Parturient </p>
+	</a>
+</div>
+
+		<div class="widget widget-carousel" data-autoplay="true">
+	
+	<div class="carousel">
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<h4 class="title">Optional title</h4>
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="controls">
+		<div class="prev"><</div>
+		<div class="text">2 av 6</div>
+		<div class="next">></div>
+	</div>
+</div>
+
+		
+<div class="widget widget-poll">
+	<p class="widget-title">Poll</p>
+	<div class="poll-content">
+		<p class="poll-question">Är detta en fråga med tre alternativ?</p>
+		<br>
+		
+		<div class="form">
+	      <div class="row">
+	        <div class="col">
+	          <div class="row">
+	            <div class="col">
+	              <label class="label-radio">
+	                <input type="radio" name="specific-name" value="value1" /> <p class="widget-text">Svar 1</p>
+	              </label>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	              <label class="label-radio">
+	                <input type="radio" name="specific-name" value="value2" /> <p class="widget-text">Svar 2</p>
+	              </label>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	              <label class="label-radio">
+	                <input type="radio" name="specific-name" value="value3" /> <p class="widget-text">Svar 3</p>
+	              </label>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	              <div class="poll-submit">
+	              <br>
+	                <input type="submit" value="Skicka svar" class="btn purple" />
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	</div>
+</div>
+
+<div class="widget widget-poll">
+	<p class="widget-title">Poll</p>
+	<div class="poll-content-answered">
+	<br>
+		<p class="poll-question">Tack för ditt svar!</p>
+		 
+	              <div class="poll-submit">
+	              <br>
+	                <input type="submit" value="Visa resultat" class="btn purple" />
+	                <br>
+	                <br>
+	              </div>
+	            </div>
+	        </div>
+
+<div class="widget widget-poll">
+	<p class="widget-title">Poll</p>
+	<div class="poll-content">
+		<p class="poll-question">Är detta en fråga med tre alternativ?</p>
+		<br>
+		
+		<div class="form">
+	      <div class="row">
+	        <div class="col">
+	          <div class="row">
+	            <div class="col">
+	              <p class="widget-text">Svar 1</p>
+	              <div class="progress-bar"></div><p class="progress-text">70%</p>	
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	             <p class="widget-text">Svar 2</p>
+	             <div class="progress-bar-two"></div><p class="progress-text">10%</p>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	             <p class="widget-text">Svar 3</p>
+	             <div class="progress-bar-three"></div><p class="progress-text">20%</p>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <div class="col">
+	              <div class="poll-submit">
+	              
+	              <hr>
+	                <p class="widget-text votes">340 har röstat</p>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	</div>
+</div>	   
+
+
+	</div>
+
+	<div class="group-minor">
+
+		<div class="widget widget-date">
+	<p class="widget-title">Date module</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="date col"><a href="#">02 jul</a></div>
+			<div class="text col">
+				<a href="#">Studier på stressinducerade stamceller dras tillbaka</a>
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col"><a href="#">02 jul</a></div>
+			<div class="text col">
+				<a href="#">Studier på stressinducerade stamceller dras tillbaka</a>
+			</div>
+		</li>
+	</ul>
+	<div class="widget-footer">
+		<div class="row">
+			<a href="#">
+				<div class="icon col">
+					<img src="data:image/gif;base64,R0lGODlhEAAQAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyRUE1ODY3OTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyRUE1ODY3QTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJFQTU4Njc3Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJFQTU4Njc4Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAABAAEAAAAiWEEXGoe7mgM5K2WVlMvPsPdts4ac/lZBlpbeELc6yJoes5z1kBADs="/>
+				</div>
+				<div class="text col">Se alla senaste nyheter</div>
+				<div class="next col icon-arrow-right"></div>
+			</a>
+		</div>
+	</div>
+</div>
+
+		<div class="widget widget-most-read">
+	<p class="widget-title">Mest lästa</p>
+	<ol class="widget-list">
+		<li>
+			<p class="widget-text">
+				
+				<a href="#">Studier på stressinducerade stamceller dras tillbaka</a>
+			</p>
+		</li>
+		<li>
+			<p class="widget-text">
+				
+				<a href="#">Studier på stressinducerade stamceller dras tillbaka</a>
+			</p>
+		</li>
+		<li>
+			<p class="widget-text">
+				
+				<a href="#">Studier på stressinducerade stamceller dras tillbaka</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+		<div class="widget widget-short-news">
+	<p class="widget-title">Nyheter i korthet</p>
+	<ul class="widget-list">
+		<li>
+			<a href="#">
+				<strong>Rubrik Nulla vitae elit libero</strong>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur 
+					adipiscing elit. Nulla vitae elit libero.
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<strong>Rubrik Nulla vitae elit libero</strong>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur 
+					adipiscing elit. Nulla vitae elit libero.
+				</p>
+			</a>
+		</li>
+	</ul>
+</div>
+
+		<div class="widget widget-calendar">
+	<p class="widget-title">Calendar module</p>
+	<ul class="widget-list">
+		<li class="row">
+			<a href="#">
+				<div class="date uppercase">
+					<div class="date-wrapper"><strong>9</strong> Jul</div>
+				</div>
+				<div class="text">
+					<p class="widget-text bold">
+						Adhd-dagen 2014: Hur bryter vi onda 
+						cirklar?	-	<span class="text-blue">Stockholm</span>
+					</p>
+					<p class="widget-text">Arrangör: Dagens Medicin</p>
+				</div>
+			</a>
+		</li>
+		<li class="row">
+			<a href="#">
+				<div class="date uppercase">
+					<div class="date-wrapper"><strong>11</strong> Dez</div>
+				</div>
+				<div class="text">
+					<p class="widget-text bold">
+						Adhd-dagen 2014: Hur bryter vi onda 
+						cirklar?	-	<span class="text-blue">Stockholm</span>
+					</p>
+					<p class="widget-text">Arrangör: Dagens Medicin</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+		<div class="widget-small green">
+	<p class="widget-title">Registrera dig nu</p>
+	<p>Här kan du registreta dig for vårt nyhetsbrev</p>
+	
+</div>
+
+		<div class="widget-small blue">
+	<p class="widget-title">Tipsa oss!</p>
+	<p>HMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.</p>
+	
+		<p class="widget-interaction">
+			<a href="#" class="inverted">Tipsa oss här</a>
+		</p>
+	
+</div>
+
+		<div class="widget-small primary-color-7">
+	<p class="widget-title">Small widget</p>
+	<p>HMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.</p>
+	
+		<p class="widget-interaction">
+			<a href="#" class="inverted">Link to void</a>
+		</p>
+	
+</div>
+
+		<div class="widget-small blue">
+	<p class="widget-title">Small widget</p>
+	<p>Morbi leo risus, porta ac consectetur ac</p>
+	
+		<p class="widget-interaction">
+			<a href="#" class="btn btn-black dark-blue">call to action</a>
+		</p>
+	
+</div>
+	
+	</div>
+
+	<div class="group-minor">
+
+		<div class="widget widget-bloggers internal">
+		<p class="widget-title">
+			
+				Interna Bloggare
+			
+		</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="widget-blogger-name">Mats Reimer</p>
+				<p>
+					Nature listar kemikaliefria produkter
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="widget-blogger-name">Mats Reimer</p>
+				<p>
+					Det är svårt att förlåta. Det kan ta tid. 
+					Det kan ta resten av ens liv 
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+		<div class="widget widget-bloggers external">
+		<p class="widget-title">
+			
+				Extern Bloggare
+			
+		</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="widget-blogger-name">Mats Reimer</p>
+				<p>
+					Nature listar kemikaliefria produkter
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="widget-blogger-name">Mats Reimer</p>
+				<p>
+					Det är svårt att förlåta. Det kan ta tid. 
+					Det kan ta resten av ens liv 
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+		<div class="widget widget-jobs">
+	<p class="widget-title">På jobbet</p>
+	<ul class="widget-list">
+		<li><a href="#"><p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p></a></li>
+		<li><a href="#"><p class="widget-text">Verksamhetschef till Verksamhetsområde Infektion - Uppsala</p></a></li>
+		<li><a href="#"><p class="widget-text">Chefsläkare, Capiogruppen - Örebro</p></a></li>
+		<li><a href="#"><p class="widget-text">Vårdcentralschef Närhälsan- Partille</p></a></li>
+		<li><a href="#"><p class="widget-text">Carlanderska i Göteborg söker psykiatriker - Göteborg</p></a></li>
+	</ul>
+	<div class="widget-footer">
+		<div class="form">
+			<div class="row form-inline form-small-input">
+				<input type="text" placeholder="Placeholder" />
+				<button class="btn dark-green">Sök</button>
+			</div>
+			<div class="row view-jobs">
+				<a href="#">
+					<div class="icon col">
+						<img src="data:image/gif;base64,R0lGODlhEAAQAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyRUE1ODY3OTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyRUE1ODY3QTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJFQTU4Njc3Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJFQTU4Njc4Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAABAAEAAAAiWEEXGoe7mgM5K2WVlMvPsPdts4ac/lZBlpbeELc6yJoes5z1kBADs="/>
+					</div>
+					<div class="text col">Se fler platsannonser (38)</div>
+					<div class="next col">></div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="widget widget-last-chance">
+	<p class="widget-title">Sista chansen</p>
+	<ul class="widget-list">
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+	</ul>
+	<div class="widget-jobs">
+		<div class="widget-footer">
+			<div class="form">
+				<div class="row view-jobs">
+					<a href="#">
+						<div class="icon col">
+							<img src="data:image/gif;base64,R0lGODlhEAAQAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyRUE1ODY3OTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyRUE1ODY3QTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJFQTU4Njc3Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJFQTU4Njc4Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAABAAEAAAAiWEEXGoe7mgM5K2WVlMvPsPdts4ac/lZBlpbeELc6yJoes5z1kBADs="/>
+						</div>
+						<div class="text col">Se fler platsannonser (38)</div>
+						<div class="next col">></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="widget-bypass">
+	<div class="widget-header">
+		<p class="headline">Byline headline</p>
+		<p class="name">Name Surname</p>
+	</div>
+	<img src="http://placehold.it/270x100&text=image" />
+	<div class="widget-text">
+		<p>
+			Dagens Medicins chefredaktör Christina Kennedy 
+			bloggar om vård och politik på www.dagensmedicin.se. 
+			Du kan också följa henne på Twitter: 
+			<a href="#">http://twitter.com/kennedianskt</a> 
+		</p>
+	</div>
+</div>
+
+		<div class="widget-information">
+	<p class="widget-title">Information</p>
+	<ul class="widget-list">
+		<li>
+			<p class="bold">Arbetsgivare</p>
+			<p>Karolinska Sjukhuset</p>
+		</li>
+		<li>
+			<p class="bold">Stad</p>
+			<p>Stockholm</p>
+		</li>
+		<li>
+			<p class="bold">Land</p>
+			<p>Sverige</p>
+		</li>
+		<li>
+			<p class="bold">Sista ansökningsdatum</p>
+			<p>2014-10-12</p>
+		</li>
+		<li>
+			<p class="bold">Publiceringsdatum</p>
+			<p>2014-10-01</p>
+		</li>
+		<li>
+			<a href="#" class="btn-call-to-action gradient uppercase">
+				Call to action!
+			</a>
+		</li>
+	</ul>
+</div>
+
+	</div>
+</div>
+
+<div class="wrapper">
+	<h2>Agenda widgets</h2>
+	<div class="group-primary">
+		<div class="group-secondary">
+
+			<div class="widget widget-agenda-date">
+	<p class="widget-title">Date module</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="date col">9:00</div>
+			<div class="text col">
+				<p class="widget-text">
+					Studier på stressinducerade stamceller dras tillbaka
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col">9:10</div>
+			<div class="text col">
+				<p class="widget-text">
+					Studier på stressinducerade
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col">9:20</div>
+			<div class="text col">
+				<p>
+					<strong>
+						Ska vi (e)hälsa hem eller stanna? <br>
+						– E-hälsomyndighetens första år
+					</strong>
+				</p>
+				<p>
+					Den nya E-hälsomyndigheten har snart ett år på 
+					nacken. Syftet är att myndigheten ska samordna 
+					regeringens satsningar på e-hälsa och skapa 
+					tillgänglig och säker information för hälsa, 
+					vård och omsorg med teknikens hjälp.	
+				</p>
+				<p> 
+					Hur har arbetet gått hittills? Vilka utmaningar 
+					och hinder har kantat vägen och hur ser framtiden 
+					med myndigheten ut? Hur långt är det kvar innan 
+					vården älskar sina it-system?
+				</p>
+				<p>
+					Torsten Håkansta, generaldirektör 
+					E-hälsomyndigheten, Sören Olofsson, särskild 
+					utredare, Socialdepartementet.
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+		</div>
+		<div class="group-minor">
+
+			<div class="widget widget-agenda-information">
+	<p class="widget-title">Information</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="date col">Tid:</div>
+			<div class="text col">
+				27 augusti 10:00 till 29 augusti
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col">Address:</div>
+			<div class="text col">
+				Torkelknutssonsgatan 27 11269 Stockholm
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col">Pris:</div>
+			<div class="text col">
+				2800 SEK
+			</div>
+		</li>
+		<li class="row">
+			<div class="date col">Pris inklusive tygkasse:</div>
+			<div class="text col">
+				3800 SEK
+			</div>
+		</li>
+		<li class="row">
+			<div class="text col">
+				Fritext: Maecenas faucibus mollis interdum. Cras 
+				mattis consectetur purus sit amet fermentum.
+			</div>
+		</li>
+	</ul>
+</div>
+
+			<div class="widget widget-sponsor">
+	<p class="widget-title">Sponsorer</p>
+	<ul class="widget-list">
+		<li>
+			<a href="#"><img src="http://placehold.it/300x140/text=image"></a>
+		</li>
+		<li>
+			<a href="#"><img src="http://placehold.it/300x90/text=image"></a>
+		</li>
+		<li>
+			<a href="#"><img src="http://placehold.it/300x120/text=image"></a>
+		</li>
+	</ul>
+</div>
+
+		</div>
+	</div>
+	<div class="group-minor">
+
+		<div class="widget widget-agenda-speakers">
+	<p class="widget-title">Talare</p>
+	<ul class="widget-list">
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="name">Mats Reimer</p>
+				<p>Nature listar kemikaliefria produkter</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="text">
+				<p class="name">Mats Reimer</p>
+				<p>
+					CIO och Utvecklingsdirektör i Stockholms läns 
+					sjukvårdsområde.
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="image col">
+				<img src="http://placehold.it/80x80&text=image" />
+			</div>
+			<div class="text col">
+				<p class="name">Mats Reimer</p>
+				<p>Nature listar kemikaliefria produkter</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+	</div>
+</div>
+
+<div class="wrapper">
+	<h2>Profile widgets</h2>
+	<div class="group-primary">
+		<div class="group-secondary">
+
+				<div class="widget widget-form-panel">
+		<p class="widget-title">Min profil</p>
+		<div class="form">
+			<div class="row">
+				<div class="col required">
+					<label><strong>Form title</strong></label>
+					<input type="text" placeholder="Description">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label><strong>Form title</strong></label>
+					<input type="text" placeholder="Description">
+				</div>
+				<div class="col">
+					<label><strong>Form title</strong></label>
+					<input type="text" placeholder="Description">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<label><strong>Input label</strong></label>
+					<select class="select2 test" style="width: 100%;">
+						<option value="">Dropdown 1</option>
+						<option value="1">Dropdown 2</option>
+						<option value="2">Dropdown 3</option>
+					</select>
+				</div>
+				<div class="col">
+					<label><strong>Input label</strong></label>
+					<select class="select2" style="width: 100%;">
+						<option value="">Dropdown</option>
+						<option value="1">Dropdown</option>
+						<option value="2">Dropdown</option>
+					</select>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<div class="col">
+					<label><strong>Form title</strong></label>
+					<input type="text" placeholder="Description">
+				</div>
+				<div class="col">
+					<label><strong>Form title</strong></label>
+					<input type="text" placeholder="Description">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button class="btn btn-big brown gradient">SPARA</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		</div>
+		<div class="group-minor">
+
+			<div class="widget widget-job-subscriptions">
+	<p class="widget-title">Jobbevakning</p>
+	<ul class="widget-list">
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<p class="widget-name">Sista ansökningdag: 26/10</p>
+				<p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p>
+			</a>
+		</li>
+	</ul>
+	<div class="widget-footer">
+		<div class="form">
+			
+				<div class="row form-inline form-small-input">
+					<input type="text" placeholder="Placeholder" />
+					<button class="btn dark-green">Sök</button>
+				</div>
+			
+			<div class="row view-jobs">
+				<a href="#">
+					<div class="icon col">
+						<img src="data:image/gif;base64,R0lGODlhEAAQAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyRUE1ODY3OTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyRUE1ODY3QTc5NEQxMUU0QUZGNEVCQjUyQTUyQzU4NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJFQTU4Njc3Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJFQTU4Njc4Nzk0RDExRTRBRkY0RUJCNTJBNTJDNTg3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAABAAEAAAAiWEEXGoe7mgM5K2WVlMvPsPdts4ac/lZBlpbeELc6yJoes5z1kBADs="/>
+					</div>
+					<div class="text col">Se fler platsannonser (38)</div>
+					<div class="next col">></div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+	<div class="group-minor">
+
+		<div class="widget widget-checkboxes collapsable">
+	<p class="widget-title">Checkboxes</p>
+	<div class="form">
+		<div class="row checkbox">
+			<div class="col">
+				<label><input type="checkbox"> Dagliga vårdnyheter</label>
+			</div>
+		</div>
+		<div class="row checkbox">
+			<div class="col">
+				<label><input type="checkbox"> Cancer</label>
+			</div>
+		</div>
+		<div class="row checkbox">
+			<div class="col">
+				<label><input type="checkbox"> Jobb, karriär, ledarskap</label>
+			</div>
+		</div>
+		<div class="row checkbox">
+			<div class="col">
+				<label><input type="checkbox"> Neurologi</label>
+			</div>
+		</div>
+		<div class="row select">
+			<div class="col">
+				<label>Input label</label>
+				<select class="select2" style="width: 100%;">
+					<option value="">Dropdown</option>
+					<option value="1">Dropdown</option>
+					<option value="2">Dropdown</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<button class="btn btn-big serif gradient blue">SPARA</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<div class="wrapper">
+	<div class="group-primary">
+		<div class="widget widget-checkboxes widget-checkboxes-columns collapsable is-collapsed">
+	<p class="widget-title">Checkboxes</p>
+	<div class="form">
+
+		<div class="row">
+			<div class="col">
+				
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Dagliga vårdnyheter</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Cancer</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Jobb, ledarskap</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Neurologi</span></label>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Dagliga vårdnyheter</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Cancer</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Jobb, ledarskap</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Neurologi</span></label>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Dagliga vårdnyheter</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Cancer</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Karriär</span></label>
+					</div>
+				</div>
+				<div class="row checkbox">
+					<div class="col">
+						<label><input type="checkbox"> <span>Neurologi</span></label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="row select">
+			<div class="col">
+				<label>Input label</label>
+				<select class="select2" style="width: 100%;">
+					<option value="">Dropdown</option>
+					<option value="1">Dropdown</option>
+					<option value="2">Dropdown</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<button class="btn btn-big serif gradient blue">SPARA</button>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+	<div class="group-minor">
+	</div>
+</div>
+<div class="wrapper"> 
+	<div class="group-primary">
+
+		<div class="carousel-big">
+	<div class="carousel">
+		<div class="item"><img src="http://placehold.it/1500x800/text=image" /></div>
+		<div class="item"><img src="http://placehold.it/1500x800/text=image" /></div>
+		<div class="item"><img src="http://placehold.it/1500x800/text=image" /></div>
+	</div>
+	<div class="prev">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJNJREFUeNpi+P//PwOROBqIdwMxF4hPrCY/IP77HwK2AzEbsZp+/UcFGwlp8sKiCQQy8WlyAuJvWDRV4PMjXk24NJrj0NSArA6bpo9YNHWgW4DMMSVWE7JGXSB+jUXTdFyBR0gTIz6N17BoAokx4Ytjimwk248UhSpF8UhRyqEorVKUOyjKjxSVABSVOVhLOYAAAwD2gjUJDLhrqAAAAABJRU5ErkJggg=="/>
+	</div>
+	<div class="next">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi+P//PwMQcwHxbiCOhvIJYhDBBsTb/0PAXyD2I1bjxv+o4BcxmkFE5n9MANLsRUgjCFdg0fwNiJ0IaSRZM7pAAw7N5oQ0gnAHFs0f0TXj8jwuzaaENILwdCyaXwOxLiGNjPg0E0ohTEB8DYvmazSxkSw/khWqZMUjWSmHrLRKVu4gOz+SXQKQXeaQVcoBBBgAIjc1CbtDW9sAAAAASUVORK5CYII="/>
+	</div>
+</div>
+
+
+		<div class="wide-carousel" data-autoplay="true">
+	<div class="prev">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJNJREFUeNpi+P//PwOROBqIdwMxF4hPrCY/IP77HwK2AzEbsZp+/UcFGwlp8sKiCQQy8WlyAuJvWDRV4PMjXk24NJrj0NSArA6bpo9YNHWgW4DMMSVWE7JGXSB+jUXTdFyBR0gTIz6N17BoAokx4Ytjimwk248UhSpF8UhRyqEorVKUOyjKjxSVABSVOVhLOYAAAwD2gjUJDLhrqAAAAABJRU5ErkJggg=="/>
+	</div>
+	<div class="carousel">
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+		<div class="row item">
+			<a href="#">
+				<div class="col image">
+					<img src="http://placehold.it/500x500/text=image" />
+				</div>
+				<div class="col text">
+					<p class="carousel-text">Varning för SSRI:s utsättningssymtom</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="next">
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi+P//PwMQcwHxbiCOhvIJYhDBBsTb/0PAXyD2I1bjxv+o4BcxmkFE5n9MANLsRUgjCFdg0fwNiJ0IaSRZM7pAAw7N5oQ0gnAHFs0f0TXj8jwuzaaENILwdCyaXwOxLiGNjPg0E0ohTEB8DYvmazSxkSw/khWqZMUjWSmHrLRKVu4gOz+SXQKQXeaQVcoBBBgAIjc1CbtDW9sAAAAASUVORK5CYII="/>
+	</div>
+</div>
+
+	</div>
+	<div class="group-minor">
+
+		<div class="widget widget-carousel" data-autoplay="true">
+	
+	<div class="carousel">
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<h4 class="title">Optional title</h4>
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+		<div class="item">
+			<a href="#">
+				<img src="http://placehold.it/800x500/text=image" />
+				<div class="item-text-big">
+					<p>Slidermodul Nulla vitae elit libero, a pharetra augue.</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="controls">
+		<div class="prev"><</div>
+		<div class="text">2 av 6</div>
+		<div class="next">></div>
+	</div>
+</div>
+
+	</div>
+</div>
+<div class="wrapper article">
+	<div class="group-primary">
+		<h1>Small Toolkit</h1>
+		<p class="h4 serif">
+			– Det här är intressanta rön, som bekräftar annan forskning 
+			som kommit på senare år. Budskapet är att man måste prata 
+			med sitt barn så ofta det går, säger Hugo Lagercrantz, 
+			senior professor i barnmedicin vid Karolinska institutet 
+			i Solna.
+		</p>
+		<div class="text-padding">
+			<p>
+				Amerikanska forskare spelade in alla ljud som 36 för tidigt 
+				födda barn hörde under två 16-timmarsperioder vid 32 
+				respektive 36 veckors postmenstrual ålder. Postmenstrual 
+				ålder är tiden som gått mellan den senaste menstruationens 
+				första dag och födseln plus tiden efter födseln.
+			</p>
+		</div>
+		<blockquote>
+			“Lorem ipsum dolor sit amet, consectetur adipiscing elit porta 
+			lorem quam elit”
+		</blockquote>
+		<div class="text-padding">
+			<p>
+				Det här är intressanta rön, som bekräftar annan forskning 
+				som kommit på senare år. Budskapet är att man måste prata 
+				med sitt barn så ofta det går, säger Hugo Lagercrantz, 
+				senior professor i barnmedicin vid Karolinska institutet 
+				i Solna.
+			</p>
+			<p>
+				Det här är intressanta rön, som bekräftar annan forskning 
+				som kommit på senare år. Budskapet är att man måste prata 
+				med sitt barn så ofta det går, säger Hugo Lagercrantz, 
+				senior professor i barnmedicin vid Karolinska institutet 
+				i Solna.
+			</p>
+			<p>
+				Det här är intressanta rön, som bekräftar annan forskning 
+				som kommit på senare år. Budskapet är att man måste prata 
+				med sitt barn så ofta det går, säger Hugo Lagercrantz, 
+				senior professor i barnmedicin vid Karolinska institutet 
+				i Solna.
+			</p>
+			<p>
+				<button class="btn red">Logga ut</button>
+				<button class="btn">18 SEP</button>
+				<button class="btn gradient">SPARA</button>
+				<button class="btn loading" disabled>Laddar</button>
+			</p>
+			<p>
+				<button class="btn"><span class="icon-arrow-left"></span> Tillbaka</button>
+				<button class="btn">Framåt <span class="icon-arrow-right"></span></button>
+
+			</p>
+			<p>
+				<button class="btn btn-big red">Logga ut</button>
+				<button class="btn btn-big">18 SEP</button>
+				<button class="btn btn-big loading" disabled>Laddar</button>
+			</p>
+		</div>
+
+		<p class="big-subheadline">Bigger top sub headline</p>
+		<p class="small-subheadline">
+			<strong>Top subheadline, for example</strong> blog author
+		</p>
+
+
+		<h4 class="small-subheadline tag"><span>Nyheter från startsidan</span></h4>
+
+	</div>
+	
+	<div class="group-minor">
+		<div class="widget-styled">
+	
+	
+		<p class="widget-title">Headline</p>
+		<div class="widget-text">
+			<p>
+				<strong>Cras justo odio,</strong> dapibus ac facilisis in, egestas eget quam. 
+				Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo 
+				quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+				Cras justo odio, dapibus ac facilisis in, egestas eget quam. 
+				Aenean 
+			</p>
+			<p>
+				<a href="#">Cras justo</a> odio, dapibus ac facilisis in, egestas eget quam. 
+				Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo 
+				quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+				Cras justo odio, dapibus ac facilisis in, egestas eget quam. 
+				Aenean 
+			</p>
+		</div>
+	
+</div>
+
+		<div class="widget-styled">
+	
+	
+		<p class="widget-title">Bullet list</p>
+		<ul>
+			<li class="list-title">List Heading</li>
+			<li>Integer posuere erat</li>
+			<li>Fusce dapibus, tellus commodo vestibulum</li>
+			<li>Donec id elit non</li>
+			<li>Sed posuere consect id ligula porta felis</li>
+			<li>Aenean lacinia bibendum nulla</li>
+		</ul>
+	
+</div>
+
+		<div class="widget-styled">
+	
+	
+			<p class="widget-title">Numbered list</p>
+			<ol>
+				<li class="list-title">List Heading</li>
+				<li>Integer posuere erat</li>
+				<li>Fusce dapibus, tellus commodo vestibulum</li>
+				<li>Donec id elit non</li>
+				<li>Sed posuere consect id ligula porta felis</li>
+				<li>Aenean lacinia bibendum nulla</li>
+			</ol>
+	
+</div>
+
+
+		<h2 id="styleguide-loader">Loader</h2>
+
+		.loader.small
+		<span class="loader small"></span>
+		.loader
+		<span class="loader"></span>
+		.loader.big
+		<span class="loader big"></span>
+	</div>
+</div>
+<div class="wrapper"> 
+	<h1>Teasers</h1>
+
+	<div class="group-secondary">
+
+		<div class="teaser teaser-small">
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/240x160&text=image">
+			</a>
+		</div>
+	
+	<div class="text col">
+		
+			<p class="tag">The tag</p>
+		
+		<a href="#">
+			<h4 class="teaser-title">Small image article teaser Ligula Porta Elit</h4>
+		</a>
+			<p class="teaser-text">
+				
+
+				<a href="#">
+					Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</a> 
+			</p>
+	</div>
+	
+</div>
+
+		<div class="teaser teaser-list ">
+	
+		 <div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/100x120&text=image">
+			</a>
+		</div>
+	
+	<div class="text col">
+		<p class="tag">The tag</p>
+		<a href="#">
+			<h4 class="teaser-title">List article teaser</h4>
+		</a>
+		<p class="teaser-text">
+			<a href="#"><strong>Christina Kennedy Avskaffandet</strong> av läkarrocken har lett till otydlighet och förstärkt fördomar i vården, skriver Kajsa Dovstad (FP), läkarstudent.</a>
+			<span class="comment-baloon">23</span>
+		</p>
+	</div>
+	
+</div>
+
+		<div class="teaser teaser-event">
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/240x120&text=image">
+			</a>
+		</div>
+	
+	<div class="text col">
+		<a href="#">
+			<p class="teaser-title">Teaser Event</p>
+		</a>
+		
+		<p class="teaser-text">
+			<a href="#">
+				Läkarrocken har lett till otydlighet och förstärkt
+			</a>
+		</p>
+	</div>
+	
+</div>
+
+		<div class="teaser teaser-small">
+	
+	<div class="text col">
+		
+			<p class="tag">The tag</p>
+		
+		<a href="#">
+			<h4 class="teaser-title">Small image article teaser Ligula Porta Elit</h4>
+		</a>
+			<p class="teaser-text">
+				
+
+				<a href="#">
+					Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</a> 
+			</p>
+	</div>
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/240x160&text=image">
+			</a>
+		</div>
+	
+</div>
+
+		<div class="teaser teaser-list right">
+	
+	<div class="text col">
+		<p class="tag">The tag</p>
+		<a href="#">
+			<h4 class="teaser-title">List article teaser</h4>
+		</a>
+		<p class="teaser-text">
+			<a href="#"><strong>Christina Kennedy Avskaffandet</strong> av läkarrocken har lett till otydlighet och förstärkt fördomar i vården, skriver Kajsa Dovstad (FP), läkarstudent.</a>
+			<span class="comment-baloon">23</span>
+		</p>
+	</div>
+	
+		 <div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/100x120&text=image">
+			</a>
+		</div>
+	
+</div>
+
+		<div class="teaser teaser-event">
+	
+	<div class="text col">
+		<a href="#">
+			<p class="teaser-title">Teaser Event</p>
+		</a>
+		
+		<p class="teaser-text">
+			<a href="#">
+				Läkarrocken har lett till otydlighet och förstärkt
+			</a>
+		</p>
+	</div>
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/240x120&text=image">
+			</a>
+		</div>
+	
+</div>
+
+		<div class="teaser teaser-regular">
+	
+	
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> 
+	</p>
+</div>
+
+		<div class="teaser teaser-regular">
+	
+	<a href="#">
+		<p class="image">
+			<img src="http://placehold.it/600x340&text=image" alt="placeholder">
+		</p>
+	</a>
+	
+	
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> 
+	</p>
+</div>
+
+		<div class="teaser teaser-regular">
+	
+	<a href="#">
+		<p class="image">
+			<img src="http://placehold.it/600x140&text=image" alt="placeholder">
+		</p>
+	</a>
+	
+	<p class="tag">Arbetsklädsel</p>
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">70</span></a>
+	</p>
+</div>
+
+		<div class="teaser teaser-regular">
+	
+	<a href="#">
+		<p class="image">
+			<img src="http://placehold.it/600x340&text=image" alt="placeholder">
+		</p>
+	</a>
+	
+	<p class="tag">Arbetsklädsel</p>
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">26</span></a>
+	</p>
+</div>
+
+		<div class="teaser teaser-regular teaser-sponsored">
+	<div class="teaser-sponsored-title">Sponsrat innehåll</div>
+	<a href="#">
+		<p class="image">
+			<img src="http://placehold.it/600x340&text=image" alt="placeholder">
+		</p>
+	</a>
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		<span class="tag tag-small">Tele2</span>
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">10</span></a>
+	</p>
+</div>
+		
+		<div class="teaser teaser-regular teaser-sponsored teaser-sponsored-small">
+	<div class="teaser-sponsored-title">Sponsrat innehåll</div>
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		<span class="tag tag-small">Tele2</span>
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a>
+	</p>
+</div>
+
+		<div class="teaser teaser-thin">
+	<div class="row">
+		<div class="col col-left">
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+				<p class="tag">Kirurgi</p>
+				<a href="#">
+					<p class="teaser-title">
+						Allvarliga brister hos privata sjukgymnaster
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit 
+						aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+						leo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="col col-right">
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+				<p class="tag">Kirurgi</p>
+				<a href="#">
+					<p class="teaser-title">
+						Allvarliga brister hos privata sjukgymnaster
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit 
+						aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+						leo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="teaser teaser-regular">
+	
+	<p class="tag">Arbetsklädsel</p>
+	<a href="#">
+		<h4 class="teaser-title-thinner">A regular article teaser Justo Sollicitudin Dolor Quam</h4>
+	</a>
+	<p class="teaser-text">
+		
+		<a href="#">Psykisk ohälsa är en av de vanligaste orsakerna till 
+		sjukskrivning. Nationella satsningar har gjorts men ändå 
+		står samhället ofta handlingsförlamat.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">10</span></a>
+	</p>
+</div>
+
+		<div class="teaser teaser-big">
+	
+	<a href="#">
+		<h4 class="teaser-title">
+			A regular article teaser Justo Sollicitudin Dolor Quam
+		</h4>
+	</a>
+	<p class="teaser-text">
+		<a href="#">
+			Aenean eu leo quam. Pellentesque ornare sem lacinia quam 
+			venenatis vestibulum. Maecenas sed diam eget risus varius 
+			blandit sit amet non magna. Donec id elit non mi porta 
+			gravida at eget metus. Fusce dapibus, tellus ac cursus 
+			commodo, tortor mauris condimentum nibh, ut fermentum 
+			massa justo sit amet risus.<br>
+
+			Erat porttitor ligula, eget lacinia odio sem nec elit. 
+			Curabitur blandit tempus porttitor. Donec id elit non mi 
+			porta gravida at eget metus.
+		</a>
+	</p>
+	<p>
+		<a href="#" class="arrow arrow-right">Läs hela inlägget</a>
+	</p>
+</div>
+
+		<div class="teaser teaser-big">
+	
+		<p class="small-subheadline">
+			<strong>Top subheadline, for example</strong> blog author
+		</p>
+	
+	<a href="#">
+		<h4 class="teaser-title">
+			A regular article teaser Justo Sollicitudin Dolor Quam
+		</h4>
+	</a>
+	<p class="teaser-text">
+		<a href="#">
+			Aenean eu leo quam. Pellentesque ornare sem lacinia quam 
+			venenatis vestibulum. Maecenas sed diam eget risus varius 
+			blandit sit amet non magna. Donec id elit non mi porta 
+			gravida at eget metus. Fusce dapibus, tellus ac cursus 
+			commodo, tortor mauris condimentum nibh, ut fermentum 
+			massa justo sit amet risus.<br>
+
+			Erat porttitor ligula, eget lacinia odio sem nec elit. 
+			Curabitur blandit tempus porttitor. Donec id elit non mi 
+			porta gravida at eget metus.
+		</a>
+	</p>
+	<p>
+		<a href="#" class="arrow arrow-right">Läs hela inlägget</a>
+	</p>
+</div>
+
+		<div class="teaser teaser-grid">
+	<div class="row">
+		<div class="col teaser-header">
+			<p class="teaser-header-tag">Almedalen</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big">
+		<div class="text col">
+			<a href="#">
+				<p class="teaser-title">
+						Medicinen i litteraturen
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+				Integer posuere erat a ante venenatis dapibus posuere velit 
+				aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+				leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big">
+		<div class="text col">
+			<a href="#">
+				<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+					Integer posuere erat a ante venenatis dapibus posuere velit 
+					aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+					leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big">
+		<div class="text col">
+			<p class="tag">Tag</p>
+			<a href="#">
+				<p class="teaser-title">
+						Main article teaser on the
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+					Integer posuere erat a ante venenatis dapibus posuere velit 
+					aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+					leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-small">
+		<div class="col">
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+				<p class="tag">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the House
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit 
+						aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+						leo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x280&amp;text=image">
+				</a>
+				<p class="tag">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu eo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="text">
+				<p class="tag">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a>
+				</p>
+			</div>
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+					<p class="tag">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the table
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="teaser teaser-grid-alternative-color"> 
+	<div class="row">
+		<div class="col teaser-header-alternative-color">
+			<p class="teaser-header-tag-alternative-color">Almedalen</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big-alternative-color">
+		<div class="text col">
+			<a href="#">
+				<p class="teaser-title">
+						Medicinen i litteraturen
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+				Integer posuere erat a ante venenatis dapibus posuere velit 
+				aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+				leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big-alternative-color">
+		<div class="text col">
+			<a href="#">
+				<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+					Integer posuere erat a ante venenatis dapibus posuere velit 
+					aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+					leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-big-alternative-color">
+		<div class="text col">
+			<p class="tag-alternative-color">Tag</p>
+			<a href="#">
+				<p class="teaser-title">
+						Main article teaser on the
+				</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">
+					Integer posuere erat a ante venenatis dapibus posuere velit 
+					aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+					leo. Curabitur blandit tempus porttitor.
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="row teaser-grid-small-alternative-color">
+		<div class="col">
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+				<p class="tag-alternative-color">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the House
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit 
+						aliquet. Nullam quis risus eget urna mollis ornare vel eu 
+						leo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x280&amp;text=image">
+				</a>
+				<p class="tag-alternative-color">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">
+						Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu eo. Curabitur blandit tempus porttitor.
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="col">
+			<div class="text">
+				<p class="tag-alternative-color">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the front page Euismod Vehicula
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a>
+				</p>
+			</div>
+			<div class="text">
+				<a href="#">
+					<img src="http://placehold.it/800x480&amp;text=image">
+				</a>
+					<p class="tag-alternative-color">Tag</p>
+				<a href="#">
+					<p class="teaser-title">
+						Main article teaser on the table
+					</p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="teaser teaser-blog">
+	<div class="teaser-blog-header row">
+		<div class="teaser-blog-header-image col">
+			<a href="#"><img src="http://placehold.it/80x80&text=image" /></a>
+		</div>
+		<div class="col teaser-blog-header-text">
+			<p class="teaser-blog-title">Blogg</p>
+			<p class="teaser-blog-author"><a href="#">Christina Kennedy</a></p>
+		</div>
+	</div>
+	<div class="teaser-blog-body row">
+		<a href="#">
+			<blockquote>"Dagens Medicin utökar med fokus på kommunal sjukvård"</blockquote>
+		</a>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="group-primary">
+
+		<div class="teaser teaser-home">
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/600x600&text=image">
+			</a>
+		</div>
+	
+	<div class="text col">
+		<a href="#">
+			<p class="tag">Tag</p>
+			<p class="teaser-title-thinner">
+				Main article teaser on the front page Euismod Vehicula
+			</p>
+		</a>
+		
+			<p class="teaser-text">
+				<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">23</span>
+				</a>
+			</p>
+		
+		<div class="teaser-read-also">
+			<p class="teaser-list-title">Läs även:</p>
+			<ul class="teaser-list">
+				<li><a href="#">Gick diabetespatienterna på pumpen?</a></li>
+				<li><a href="#">Jämlik vård på lika villkor – utopi för psykiatrin?</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+		<div class="teaser teaser-home">
+	
+	<div class="text col">
+		<a href="#">
+			<p class="tag">Tag</p>
+			<p class="teaser-title-thinner">
+				Main article teaser on the front page Euismod Vehicula
+			</p>
+		</a>
+		
+			<p class="teaser-text">
+				<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">23</span>
+				</a>
+			</p>
+		
+		<div class="teaser-read-also">
+			<p class="teaser-list-title">Läs även:</p>
+			<ul class="teaser-list">
+				<li><a href="#">Gick diabetespatienterna på pumpen?</a></li>
+				<li><a href="#">Jämlik vård på lika villkor – utopi för psykiatrin?</a></li>
+			</ul>
+		</div>
+	</div>
+	
+		<div class="image col">
+			<a href="#">
+				<img src="http://placehold.it/600x600&text=image">
+			</a>
+		</div>
+	
+</div>
+
+		<div class="teaser teaser-biggest">
+		<div class="image">
+			<a href="#">
+				<img src="http://placehold.it/1500x600&text=image">
+			</a>
+		</div>
+			<a href="#">
+				<p class="tag">Kirurgi</p>
+				<h4 class="teaser-title">
+				Jämlik vård på lika villkor – utopi för psykiatrin?
+				</h4>
+			</a>
+		<p class="teaser-text">
+				<a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.</a> <a href="http://oakwood.github.com/dagensmedicin/article.html#comments"><span class="comment-baloon">23</span>
+				</a>
+		</p>
+			<div class="teaser-read-also">
+				<p class="teaser-list-title">Läs även:</p>
+				<ul class="teaser-list">
+					<li><a href="#">Gick diabetespatienterna på pumpen?</a></li>
+					<li><a href="#">Jämlik vård på lika villkor – utopi för psykiatrin?</a></li>
+				</ul>
+			</div>
+	</div>
+
+		
+	</div>
+</div>
+
+<div class="wrapper">
+	<h2>Search Teasers</h2>
+	<div class="group-primary">
+
+		<div class="teaser teaser-result">
+	<p><span class="text-blue">Sökresultat:</span> 60 lediga jobb</p>
+</div>
+
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+
+		<div class="teaser teaser-search-image">
+	<ul class="teaser-list">
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<a href="#">
+					<p class="teaser-title"><strong>Headline</strong></p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<a href="#">
+					<p class="teaser-title"><strong>Headline</strong></p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>
+				</p>
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<a href="#">
+				 <p class="teaser-title"><strong>Headline</strong></p>
+				</a>
+				<p class="teaser-text">
+					<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+		<div class="teaser teaser-job">
+	<ul class="teaser-list">
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+		<li class="row">
+			<div class="col image">
+				<a href="#">
+					<img src="http://placehold.it/400x180&text=image" />
+				</a>
+			</div>
+			<div class="col text">
+				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
+				<a href="#">
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+Rehabiliteringskliniken Halmstad</strong></p>
+				</a>			
+			</div>
+		</li>
+	</ul>
+</div>
+
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+		<br>
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+
+		<div class="teaser teaser-search">
+	<ul class="teaser-list">
+		<li>
+			<p class="tag">The tag <span class="date">2010-10-21</span></p>
+			<a href="#">
+				<p class="teaser-title">Headline</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>#
+			</p>
+		</li>
+		<li>
+			<p class="tag">The tag <span class="date">2010-10-21</span></p>
+			<a href="#">
+				<p class="teaser-title">Headline with a way too long headline that will most likely end up on two rows</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>
+			</p>
+		</li>
+		<li>
+			<p class="tag">The tag <span class="date">2010-10-21</span></p>
+			<a href="#">
+				<p class="teaser-title">Headline</p>
+			</a>
+			<p class="teaser-text">
+				<a href="#">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+		<br>
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+
+		<div class="teaser teaser-information">
+	<ul class="teaser-list">
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+						Meget solrig og centralt beliggende lejlighed i 
+						Avoriaz, der er en del af Europas største 
+						skisportsområde Les Portes du Soleil på grænsen 
+						mellem Frankrig og Schweiz, udlejes.
+						Lejligheden ligger ved place du Telepherique 
+						midt i Avoriaz på 4. sal med en skøn udsigt 
+						over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+						Meget solrig og centralt beliggende lejlighed i 
+						Avoriaz, der er en del af Europas største 
+						skisportsområde Les Portes du Soleil på grænsen 
+						mellem Frankrig og Schweiz, udlejes.
+						Lejligheden ligger ved place du Telepherique 
+						midt i Avoriaz på 4. sal med en skøn udsigt 
+						over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+						Meget solrig og centralt beliggende lejlighed i 
+						Avoriaz, der er en del af Europas største 
+						skisportsområde Les Portes du Soleil på grænsen 
+						mellem Frankrig og Schweiz, udlejes.
+						Lejligheden ligger ved place du Telepherique 
+						midt i Avoriaz på 4. sal med en skøn udsigt 
+						over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+						Meget solrig og centralt beliggende lejlighed i 
+						Avoriaz, der er en del af Europas største 
+						skisportsområde Les Portes du Soleil på grænsen 
+						mellem Frankrig og Schweiz, udlejes.
+						Lejligheden ligger ved place du Telepherique 
+						midt i Avoriaz på 4. sal med en skøn udsigt 
+						over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+							Meget solrig og centralt beliggende lejlighed i 
+							Avoriaz, der er en del af Europas største 
+							skisportsområde Les Portes du Soleil på grænsen 
+							mellem Frankrig og Schweiz, udlejes.
+							Lejligheden ligger ved place du Telepherique 
+							midt i Avoriaz på 4. sal med en skøn udsigt 
+							over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+							Meget solrig og centralt beliggende lejlighed i 
+							Avoriaz, der er en del af Europas største 
+							skisportsområde Les Portes du Soleil på grænsen 
+							mellem Frankrig og Schweiz, udlejes.
+							Lejligheden ligger ved place du Telepherique 
+							midt i Avoriaz på 4. sal med en skøn udsigt 
+							over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="teaser-title"><strong class="text-blue">Uthyres:</strong> Udlejning af lejlighed i Avoriaz</p>
+			<div class="row">
+				<div class="col image">
+					<a href="#">
+						<img src="http://placehold.it/450x330&text=image" />
+					</a>
+				</div>
+				<div class="col text">
+					<p class="teaser-text">
+						<a href="#">
+							Meget solrig og centralt beliggende lejlighed i 
+							Avoriaz, der er en del af Europas største 
+							skisportsområde Les Portes du Soleil på grænsen 
+							mellem Frankrig og Schweiz, udlejes.
+							Lejligheden ligger ved place du Telepherique 
+							midt i Avoriaz på 4. sal med en skøn udsigt 
+							over ...
+						</a>
+					</p>
+				</div>
+				<div class="col information">
+					<p class="information-title">Information</p>
+					<div class="information-text">
+						<hr/>
+					</div>
+					<p class="information-text"><strong>Land</strong> Frankrike</p>
+					<p class="information-text"><strong>Pris</strong> Se hjemmeside</p>
+					<p class="information-text"><strong>Publicerad</strong> 2014-10-04</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+		<div class="teaser-navigation row">
+	<div class="col left">1 - 6 av 14</div>
+	<div class="col right">
+		<a href="#">« Föregående</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">Nästa »</a> 
+	</div>
+</div>
+		<br>
+
+	</div>
+</div>
+<br>
+
+<div class="wrapper">
+	<h2>Forms</h2>
+	<div class="group-primary"> 
+		<div class="group-secondary">
+			<div class="form">
+
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+					</div>
+				</div>
+
+				<div class="row">
+	<div class="col">
+		<h4 class="form-header">Header 1:</h4>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio ">
+					<input type="radio" name="specific-name-1" value="value1" /> <span>Value 1</span>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio ">
+					<input type="radio" name="specific-name-1" value="value2" /> <span>Value 2</span>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio ">
+					<input type="radio" name="specific-name-1" value="value3" /> <span>Value 3</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+				<div class="row">
+	<div class="col">
+		<h4 class="form-header">Header 2:</h4>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio label-radio-indent">
+					<input type="radio" name="specific-name-2" value="value1" /> <span>Value 1</span>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio label-radio-indent">
+					<input type="radio" name="specific-name-2" value="value2" /> <span>Value 2</span>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="label-radio label-radio-indent">
+					<input type="radio" name="specific-name-2" value="value3" /> <span>Value 3</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+				<div class="row">
+					<div class="col">
+						<h4 class="form-header">Header:</h4>
+						<div class="row form-parallel">
+							<div class="col">
+								<label class="label">Inline Input label</label>
+							</div>
+							<div class="col">
+								<input type="text" placeholder="Placeholder" />
+							</div>
+						</div>
+						<div class="row form-parallel">
+	<div class="col">
+		<label class="label"></label>
+	</div>
+	<div class="col">
+		<input type="text" placeholder="Placeholder" />
+	</div>
+</div>
+					</div>
+				</div>
+
+				<div class="row">
+	<div class="col">
+		<label class="label-checkbox p-small">
+			<input type="checkbox" name="another-unique-one" value="true" /> <strong>Amerikanska forskare spelade in alla ljud som 36 för tidigt 
+födda barn hörde under två 16-timmarsperioder vid 32 
+respektive 36 veckors postmenstrual ålder.</strong>
+		</label>
+	</div>
+</div>
+
+				<div class="row">
+					<div class="col form-inline form-big-input">
+						<input type="text" placeholder="Placeholder" />
+						<button class="form-btn-white">Sök</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+					</div>
+					<div class="col error">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+						<div class="message">Error message</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+					</div>
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+					</div>
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<input type="text" placeholder="Placeholder" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<select class="select2" style="width: 100%;">
+							<option value="">Dropdown</option>
+							<option value="1">Dropdown</option>
+							<option value="2">Dropdown</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<select class="select2" style="width: 100%;">
+							<option value="">Dropdown</option>
+							<option value="1">Dropdown</option>
+							<option value="2">Dropdown</option>
+						</select>
+					</div>
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<select class="select2" style="width: 100%;">
+							<option value="">Dropdown</option>
+							<option value="1">Dropdown</option>
+							<option value="2">Dropdown</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Date input</strong></label>
+						<input type="text" class="datepicker">
+						(<a href="http://bootstrap-datepicker.readthedocs.org/en/latest/options.html">Available options</a>)
+					</div>
+					<div class="col">
+						<label class="label"><strong>Multiple input</strong></label>
+						<select class="select2" style="width: 100%;" multiple>
+							<option value="">Dropdown</option>
+							<option value="1">Dropdown</option>
+							<option value="2">Dropdown</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<textarea rows="10" placeholder="Placeholder"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+							<a href="#" class="btn btn-big gradient">SÖK</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<h2>Comments</h2>
+	<div class="group-primary">
+
+		<p class="big-subheadline">Kommentarer</p>
+<div class="form form-comment">
+	<div class="row">
+		<div class="col">
+			<input type="text" placeholder="Placeholder" />
+		</div>
+		<div class="col">
+			<input type="text" placeholder="Placeholder" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<textarea rows="5" placeholder="Placeholder"></textarea>
+		</div>
+	</div>
+	<div class="row captcha">
+		<div class="col image">
+			<img src="http://placehold.it/300x200&text=captcha">
+		</div>
+		<div class="col field">
+			<input type="text" placeholder="Placeholder" />
+		</div>
+	</div>
+	<div class="row form-comment-submit">
+		<div class="col">
+			<div class="row">
+				<div class="col">
+					<input type="checkbox" /> 
+				</div>
+				<div class="col">
+					Jag godkänner för artikelkommentarer Dagens Medicins regler
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<button class="btn btn-big gradient">Kommentara</button> 
+		</div>
+	</div>
+</div>
+
+<p class="big-subheadline no-margin">Kommentarer</p>
+
+		<div class="comment-login">
+	<p class="login-text">
+		<strong>OBS!</strong> Du måste logga in för att kommentera!
+	</p>
+	<p class="login-text">
+		<a href="#" class="btn btn-blue">Logga in</a>
+		<a href="#" class="p-smallest">Bli medlem</a>
+	</p>
+</div>
+
+		<div id="comments" class="comments">
+	<ul class="comments-list">
+		<li>
+			<p class="comments-text">
+				<strong>Per-Gunnar Larsson</strong> 2014-07-11 13:30
+			</p>
+			<p class="comments-text">
+				Vilka enastående slutsatser; är myndigheten för 
+				Vårdanalys en lekstuga? De aktuella förslagen kan ju 
+				rimligen vem som helst, som är utrustad med sunt 
+				förnuft, komma fram till. Lägg ner myndigheten och 
+				använd dess resurser till sjukvårdsarbete. Personal ur 
+				myndigheten skulle ju kunna börja jobba på riktigt inom 
+				sjukvården.
+			</p>
+			<div class="comments-text row">
+				<div class="col">
+					<a href="#" class="thumbs thumbs-up">51</a>
+					<a href="#" class="thumbs thumbs-down">5</a>
+				</div>
+				<div class="col comments-actions">
+					<a href="#"><strong>Anmäl</strong></a>
+					<a href="#" class="btn serif">SVARA</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="comments-text">
+				<strong>Per-Gunnar Larsson</strong> 2014-07-11 13:30
+			</p>
+			<p class="comments-text">
+				Vilka enastående slutsatser; är myndigheten för 
+				Vårdanalys en lekstuga? De aktuella förslagen kan ju 
+				rimligen vem som helst, som är utrustad med sunt 
+				förnuft, komma fram till. Lägg ner myndigheten och 
+				använd dess resurser till sjukvårdsarbete. Personal ur 
+				myndigheten skulle ju kunna börja jobba på riktigt inom 
+				sjukvården.
+			</p>
+			<div class="comments-text row">
+				<div class="col">
+					<a href="#" class="thumbs thumbs-up active">51</a>
+					<a href="#" class="thumbs thumbs-down">5</a>
+				</div>
+				<div class="col comments-actions">
+					<a href="#"><strong>Anmäl</strong></a>
+					<a href="#" class="btn serif">SVARA</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<p class="comments-text">
+				<strong>Per-Gunnar Larsson</strong> 2014-07-11 13:30
+			</p>
+			<p class="comments-text">
+				Vilka enastående slutsatser; är myndigheten för 
+				Vårdanalys en lekstuga? De aktuella förslagen kan ju 
+				rimligen vem som helst, som är utrustad med sunt 
+				förnuft, komma fram till. Lägg ner myndigheten och 
+				använd dess resurser till sjukvårdsarbete. Personal ur 
+				myndigheten skulle ju kunna börja jobba på riktigt inom 
+				sjukvården.
+			</p>
+			<div class="comments-text row">
+				<div class="col">
+					<a href="#" class="thumbs thumbs-up">51</a>
+					<a href="#" class="thumbs thumbs-down active">5</a>
+				</div>
+				<div class="col comments-actions">
+					<a href="#"><strong>Anmäl</strong></a>
+					<a href="#" class="btn serif">SVARA</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+	</div>
+</div>
+
+
+			<div class="site-footer">
+	<div class="meta-bar">
+		<div class="wrapper">
+			<div class="tagline">
+				
+					<strong>Dagens Medicin</strong> 
+					för dig som arbetar i hälso- och sjukvården.
+				
+			</div>
+
+			
+				<ul class="links">
+					<li><a href="/">Kontakt</a></li>
+					<li><a href="/">Annonsera</a></li>
+					<li><a href="/">Prenumerera</a></li>
+				</ul>
+			
+		</div>
+	</div>
+
+	<div class="footer-sections">
+		<div class="wrapper">
+			<div class="row">
+
+				<div class="col">
+					<a href="#" class="site-logo">Dagens Medicin</a>					
+				</div>
+
+				
+					<div class="col">
+						<p>
+							<strong>Dagens Medicin</strong><br>
+							113 90 Stockholm
+						</p>
+						<p>
+							<strong>Dagens Medicin</strong><br>
+							113 90 Stockholm
+						</p>
+					</div>
+					<div class="col">
+						<p>
+							<strong>Besökadress</strong><br>
+							Torsgatan 21, Stockholm
+						</p>
+						<p>
+							<strong>Chefredaktör och ansvarig <br>utgivare:</strong>
+							Ulf Skarin
+						</p>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+	<script type="text/javascript" src="js/oldie.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/main.js"></script>
+
+			<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+			<script src="//platform.linkedin.com/in.js" type="text/javascript">
+				lang: sv_SE
+			</script>
+		</form>
+	</body>
+
+</html>
