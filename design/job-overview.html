@@ -12,62 +12,70 @@
 	<title>Dagens Medicin</title>
 	<meta name="description" content="Lorem ipsum">
 
-	
-	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7298274/690728/css/fonts.css" />
-	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-	
 
-	
+
+
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6196712/783386/css/fonts.css" />
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+
+
+
+
+
 
 	<link rel="stylesheet" href="css/main.css">
 
-	
+
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" type="text/css" href="css/oldie.css" />
 	<![endif]-->
-	
 
-	<link rel="canonical" href="/dagensmedicin/job-overview.html">
+
+	<link rel="canonical" href="http://oakwood.github.io/dagensmedicin/job-overview.html">
 	<link rel="shortcut icon" href="img/favicon.ico" />
 
-	
-	<!-- olika Adtoma scripts beroende på stage eller live -->
-	<!-- STAGE: -->
-	<script type="text/javascript" src="//bn-01.adtomafusion.com:80/script.js"></script>
-	<!-- LIVE:
-		<script type="text/javascript" src="//fusion.dagensmedicin.se/script.js"></script>
-	-->
 
-	<script type="text/javascript">
-		var staticAssets = '/Static/';
+		<!-- olika Adtoma scripts beroende på stage eller live -->
+		<!-- STAGE: -->
+		<script type="text/javascript" src="//bn-01.adtomafusion.com:80/script.js"></script>
+		<!-- LIVE:
+			<script type="text/javascript" src="//fusion.dagensmedicin.se/script.js"></script>
+		-->
 
-		// Adtoma layouts som gäller för hela siten
-		if (typeof window.Fusion != 'undefined') {
-			var adtomaLayouts = {
-				mobile: 'dm_mob_main',
-				desktop: 'dm_layout_main'
-			};
+		<script type="text/javascript">
+			var staticAssets = '/Static/';
 
-			// mediaZone beroende på vilken avdelning av siten man är på
-			var adtomaMediazones = {
-				mobile: 'bbm.dagens_medicin.mobil.start',
-				desktop: 'bbm.dagens_medicin.start'
-			};
+			// Adtoma layouts som gäller för hela siten
+			if (typeof window.Fusion != 'undefined') {
+				var adtomaLayouts = {
+					mobile: 'bi_mob_layout_home',
+					desktop: 'bi_layout_home'
+				};
 
-			// adServer skall sättas beroende på om det är stage eller live
-			window.Fusion.adServer = "bn-01.adtomafusion.com:80";// STAGE
-			//window.Fusion.adServer = "fusion.bbm.se";			 // LIVE
+				// mediaZone beroende på vilken avdelning av siten man är på
+				var adtomaMediazones = {
+					mobile: 'bbm.business_insider_nordic.mobil.home',
+					desktop: 'bbm.business_insider_nordic.desktop.home'
+				};
 
-			window.Fusion.usepostscribe = true;
-			window.Fusion.usecheckads = false;
-		}
-	</script>
-	
+				// adServer skall sättas beroende på om det är stage eller live
+				window.Fusion.adServer = "bn-01d.adtomafusion.com";// STAGE
+				//window.Fusion.adServer = "fusion.bbm.se";			 // LIVE
+
+				window.Fusion.usepostscribe = true;
+				window.Fusion.usecheckads = false;
+			}
+		</script>
+
+
+
 </head>
+
 
 	<body>
 		<form class="emulating-episerver-wrapper-form">
-			
+
 
 			<script>(function (d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
@@ -78,9 +86,9 @@
 			}(document, 'script', 'facebook-jssdk'));</script>
 
 			<header>
-	
 
-	
+
+
 		<div class="header-top-bar mobile-hidden">
 			<div class="wrapper">
 				<div class="row">
@@ -102,11 +110,12 @@
 		</div>
 
 		<div class="header-big-add">
-			<div class="module-banner no-aspect-ratio">
-				<img src="http://placehold.it/1100x210" alt="">
+			<div class="module-banner no-aspect-ratio" data-adtoma-mobile="m_dm_rekt1" data-adtoma-desktop="d_dm_top">
 			</div>
 		</div>
-	
+
+
+
 
 	<div class="header-meta-bar mobile-hidden">
 		<div class="wrapper">
@@ -116,16 +125,19 @@
 						<li><a href="#">Kontakt</a></li>
 						<li><a href="#">Prenumerera</a></li>
 						<li><a href="#">Annonsera</a></li>
-						
-							<li><a href="#" class="btn blue gradient">Lediga jobb</a></li>
-						
+
+
+
+
 						<li>
-							
-								<a href="#" class="btn blue gradient" data-toggle-active=".widget-user">Logga in</a>
-							
 
 
-							
+									<a href="#" class="btn blue gradient" data-toggle-active=".widget-user">Logga in</a>
+
+
+
+
+
 								<div class="widget-user widget-user-login">
 									<div class="wrapper">
 										<div class="form">
@@ -165,7 +177,7 @@
 										</div>
 									</div>
 								</div>
-							
+
 						</li>
 					</ul>
 				</div>
@@ -180,336 +192,342 @@
 					<a href="#" class="header-menu-logo site-logo">Dagens Medicin</a>
 					<button class="header-menu-toggle desktop-hidden"><div>Menu</div></button>
 
-					
+
+
+
 						<ul class="header-menu-list header-list" data-hide-delay="500">
-							<li data-menu="opinion">
-									<button class="btn-menu">Opinion</button>
-									<!-- OPINION SUBMENU -->
-									<div class="header-submenu" id="opinion">
-										<!-- OPINION SUBMENU-CATEGORIES -->
-										<div class="header-submenu-categories">
-											<div class="wrapper">
-												<ul class="header-submenu-list">
-													<li><a href="#">Allmänmedicin</a></li>
-													<li><a href="#">Barnsjukvård</a></li>
-													<li><a href="#">Cancer</a></li>
-													<li><a href="#">Diabetes</a></li>
-													<li><a href="#">Hjärta-kärl</a></li>
-													<li><a href="#">Infektion</a></li>
-													<li><a href="#">Kirurgi</a></li>
-													<li><a href="#">Kvinnohälsa</a></li>
-													<li><a href="#">Luftvägarna</a></li>
-													<li><a href="#">Medicinsk teknik</a></li>
-													<li><a href="#" class="blue">Neurologi</a></li>
-													<li><a href="#" class="blue">Psykiatri</a></li>
-												</ul>
-											</div>
-										</div>
-										<!-- OPINION SUBMENU-TEASER -->
-										<div class="header-submenu-teaser mobile-hidden">
-											<div class="wrapper">
-												<p class="header-title uppercase">Populärt just nu</p>
-												<ul class="header-submenu-list">
-													<li>
-														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-															<p class="header-teaser-title uppercase">
-																Barnsjukvård
-															</p>
-															<p class="header-teaser-text">
-																Dockpraktik gör det	okej att gå på toa
-															</p>
-														</a>
-													</li>
-													<li>
-														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-															<p class="header-teaser-title uppercase">
-																Barnsjukvård
-															</p>
-															<p class="header-teaser-text">
-																Dockpraktik gör det	okej att gå på toa
-															</p>
-														</a>
-													</li>
-													<li>
-														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-															<p class="header-teaser-title uppercase">
-																Barnsjukvård
-															</p>
-															<p class="header-teaser-text">
-																Dockpraktik gör det	okej att gå på toa
-															</p>
-														</a>
-													</li>
-													<li>
-														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-															<p class="header-teaser-title uppercase">
-																Barnsjukvård
-															</p>
-															<p class="header-teaser-text">
-																Dockpraktik gör det	okej att gå på toa
-															</p>
-														</a>
-													</li>
-													<li>
-														<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-															<p class="header-teaser-title uppercase">
-																Barnsjukvård
-															</p>
-															<p class="header-teaser-text">
-																Dockpraktik gör det	okej att gå på toa
-															</p>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+		<li data-menu="opinion">
+				<button class="btn-menu">Opinion</button>
+				<!-- OPINION SUBMENU -->
+				<div class="header-submenu" id="opinion">
+					<!-- OPINION SUBMENU-CATEGORIES -->
+					<div class="header-submenu-categories">
+						<div class="wrapper">
+							<ul class="header-submenu-list">
+								<li><a href="#">Allmänmedicin</a></li>
+								<li><a href="#">Barnsjukvård</a></li>
+								<li><a href="#">Cancer</a></li>
+								<li><a href="#">Diabetes</a></li>
+								<li><a href="#">Hjärta-kärl</a></li>
+								<li><a href="#">Infektion</a></li>
+								<li><a href="#">Kirurgi</a></li>
+								<li><a href="#">Kvinnohälsa</a></li>
+								<li><a href="#">Luftvägarna</a></li>
+								<li><a href="#">Medicinsk teknik</a></li>
+								<li><a href="#" class="blue">Neurologi</a></li>
+								<li><a href="#" class="blue">Psykiatri</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- OPINION SUBMENU-TEASER -->
+					<div class="header-submenu-teaser mobile-hidden">
+						<div class="wrapper">
+							<p class="header-title uppercase">Populärt just nu</p>
+							<ul class="header-submenu-list">
+								<li>
+									<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+										<p class="header-teaser-title uppercase">
+											Barnsjukvård
+										</p>
+										<p class="header-teaser-text">
+											Dockpraktik gör det	okej att gå på toa
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+										<p class="header-teaser-title uppercase">
+											Barnsjukvård
+										</p>
+										<p class="header-teaser-text">
+											Dockpraktik gör det	okej att gå på toa
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+										<p class="header-teaser-title uppercase">
+											Barnsjukvård
+										</p>
+										<p class="header-teaser-text">
+											Dockpraktik gör det	okej att gå på toa
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+										<p class="header-teaser-title uppercase">
+											Barnsjukvård
+										</p>
+										<p class="header-teaser-text">
+											Dockpraktik gör det	okej att gå på toa
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+										<p class="header-teaser-title uppercase">
+											Barnsjukvård
+										</p>
+										<p class="header-teaser-text">
+											Dockpraktik gör det	okej att gå på toa
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</li>
+		<li data-menu="event">
+			<button class="btn-menu">Event</button>
+			<!-- EVENT SUBMENU -->
+			<div class="header-submenu" id="event">
+				<!-- EVENT SUBMENU-CATEGORIES -->
+				<div class="header-submenu-categories">
+					<div class="wrapper">
+						<ul class="header-submenu-list header-submenu-list-compact">
+							<li><a href="#">Evensmod asdasdt 1</a></li>
+							<li><a href="#">Event 2</a></li>
+							<li><a href="#">Event 3</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- EVENT SUBMENU-TEASER -->
+				<div class="header-submenu-teaser mobile-hidden">
+					<div class="wrapper">
+						<p class="header-title uppercase">Populärt just nu</p>
+						<ul class="header-submenu-list">
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
 							</li>
-							<li data-menu="event">
-								<button class="btn-menu">Event</button>
-								<!-- EVENT SUBMENU -->
-								<div class="header-submenu" id="event">
-									<!-- EVENT SUBMENU-CATEGORIES -->
-									<div class="header-submenu-categories">
-										<div class="wrapper">
-											<ul class="header-submenu-list header-submenu-list-compact">
-												<li><a href="#">Evensmod asdasdt 1</a></li>
-												<li><a href="#">Event 2</a></li>
-												<li><a href="#">Event 3</a></li>
-											</ul>
-										</div>
-									</div>
-									<!-- EVENT SUBMENU-TEASER -->
-									<div class="header-submenu-teaser mobile-hidden">
-										<div class="wrapper">
-											<p class="header-title uppercase">Populärt just nu</p>
-											<ul class="header-submenu-list">
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
 							</li>
-							<li data-menu="specializations">
-								<button class="btn-menu">Specialistområden</button>
-								<!-- SPECIALIZATIONS SUBMENU -->
-								<div class="header-submenu" id="specializations">
-									<!-- SPECIALIZATIONS SUBMENU-CATEGORIES -->
-									<div class="header-submenu-categories">
-										<div class="wrapper">
-											<ul class="header-submenu-list">
-												<li><a href="#">Specialistområden 1</a></li>
-												<li><a href="#">Specialistområden 2</a></li>
-												<li><a href="#">Specialistområden 3</a></li>
-												<li><a href="#">Specialistområden 4</a></li>
-												<li><a href="#">Specialistområden 5</a></li>
-											</ul>
-										</div>
-									</div>
-									<!-- SPECIALIZATIONS SUBMENU-TEASER -->
-									<div class="header-submenu-teaser mobile-hidden">
-										<div class="wrapper">
-											<p class="header-title uppercase">Populärt just nu</p>
-											<ul class="header-submenu-list">
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
 							</li>
-							<li data-menu="more">
-								<button class="btn-menu">Mer</button>
-								<!-- MORE SUBMENU -->
-								<div class="header-submenu" id="more">
-									<!-- MORE SUBMENU-CATEGORIES -->
-									<div class="header-submenu-categories">
-										<div class="wrapper">
-											<ul class="header-submenu-list">
-												<li><a href="#">More 1</a></li>
-												<li><a href="#">More 2</a></li>
-												<li><a href="#">More 3</a></li>
-												<li><a href="#">More 4</a></li>
-												<li><a href="#">More 5</a></li>
-											</ul>
-										</div>
-									</div>
-									<!-- MORE SUBMENU-TEASER -->
-									<div class="header-submenu-teaser mobile-hidden">
-										<div class="wrapper">
-											<p class="header-title uppercase">Populärt just nu</p>
-											<ul class="header-submenu-list">
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-												<li>
-													<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
-														<p class="header-teaser-title uppercase">
-															Barnsjukvård
-														</p>
-														<p class="header-teaser-text">
-															Dockpraktik gör det	okej att gå på toa
-														</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
 							</li>
-							<li data-menu="search" class="header-search hidden-mobile">
-								<button class="btn-menu header-search-icon">Search</button>
-								<!-- SEARCH -->
-								<div class="header-submenu" id="search">
-									<!-- SEARCH FORM -->
-									<div class="wrapper">
-										<div class="form header-search-form">
-											<div class="row">
-												<div class="col form-inline form-big-input">
-													<input type="text" placeholder="Skriv sökord här...">
-													<button class="form-btn-white">Sök</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
 							</li>
 						</ul>
-					
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-menu="specializations">
+			<button class="btn-menu">Specialistområden</button>
+			<!-- SPECIALIZATIONS SUBMENU -->
+			<div class="header-submenu" id="specializations">
+				<!-- SPECIALIZATIONS SUBMENU-CATEGORIES -->
+				<div class="header-submenu-categories">
+					<div class="wrapper">
+						<ul class="header-submenu-list">
+							<li><a href="#">Specialistområden 1</a></li>
+							<li><a href="#">Specialistområden 2</a></li>
+							<li><a href="#">Specialistområden 3</a></li>
+							<li><a href="#">Specialistområden 4</a></li>
+							<li><a href="#">Specialistområden 5</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- SPECIALIZATIONS SUBMENU-TEASER -->
+				<div class="header-submenu-teaser mobile-hidden">
+					<div class="wrapper">
+						<p class="header-title uppercase">Populärt just nu</p>
+						<ul class="header-submenu-list">
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-menu="more">
+			<button class="btn-menu">Mer</button>
+			<!-- MORE SUBMENU -->
+			<div class="header-submenu" id="more">
+				<!-- MORE SUBMENU-CATEGORIES -->
+				<div class="header-submenu-categories">
+					<div class="wrapper">
+						<ul class="header-submenu-list">
+							<li><a href="#">More 1</a></li>
+							<li><a href="#">More 2</a></li>
+							<li><a href="#">More 3</a></li>
+							<li><a href="#">More 4</a></li>
+							<li><a href="#">More 5</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- MORE SUBMENU-TEASER -->
+				<div class="header-submenu-teaser mobile-hidden">
+					<div class="wrapper">
+						<p class="header-title uppercase">Populärt just nu</p>
+						<ul class="header-submenu-list">
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="http://placehold.it/800x450&amp;text=image">
+									<p class="header-teaser-title uppercase">
+										Barnsjukvård
+									</p>
+									<p class="header-teaser-text">
+										Dockpraktik gör det	okej att gå på toa
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-menu="search" class="header-search hidden-mobile">
+			<button class="btn-menu header-search-icon">Search</button>
+			<!-- SEARCH -->
+			<div class="header-submenu" id="search">
+				<!-- SEARCH FORM -->
+				<div class="wrapper">
+					<div class="form header-search-form">
+						<div class="row">
+							<div class="col form-inline form-big-input">
+								<input type="text" placeholder="Skriv sökord här...">
+								<button class="form-btn-white">Sök</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+
+
+
+
 				</div>
 			</div>
 		</div>
@@ -517,89 +535,139 @@
 </header>
 
 
-			<br>
-<div class="wrapper template-job-overview">
-
-  <h1 class="heading-section heading-underline text-blue"><span>Lediga jobb</span></h1>
-  <br>
-  
-  <div class="group-primary">
-    <div class="form">
-      <div class="row">
-        <div class="col form-inline form-big-input">
-          <input type="text" placeholder="Placeholder" />
-          <button class="form-btn-white">Sök</button>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col">
-          <a href="#" class="toggle-active" data-toggle-active=".advanced-search">Gör avancerad sökning</a>
-        </div>
-      </div>
-      <br>
-      <div class="advanced-search">
-        <div class="row">
-          <div class="col">
-            <label class="label"><strong>Input label</strong></label>
-            <select class="select2" style="width: 100%;">
-              <option value="">Dropdown</option>
-              <option value="1">Dropdown</option>
-              <option value="2">Dropdown</option>
-            </select>
-          </div>
-          <div class="col">
-            <label class="label"><strong>Input label</strong></label>
-            <select class="select2" style="width: 100%;">
-              <option value="">Dropdown</option>
-              <option value="1">Dropdown</option>
-              <option value="2">Dropdown</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="label"><strong>Input label</strong></label>
-            <select class="select2" style="width: 100%;">
-              <option value="">Dropdown</option>
-              <option value="1">Dropdown</option>
-              <option value="2">Dropdown</option>
-            </select>
-          </div>
-          <div class="col">
-            <label class="label"><strong>Input label</strong></label>
-            <select class="select2" style="width: 100%;">
-              <option value="">Dropdown</option>
-              <option value="1">Dropdown</option>
-              <option value="2">Dropdown</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <br>
-            <input type="submit" value="Sortera" class="btn btn-big gradient">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="teaser teaser-result">
-	<p><span class="text-blue">Sökresultat:</span> 60 lediga jobb</p>
+			<div class="search-header-content">
+	<h1>Sök toppjobben i branchen</h1>
 </div>
 
-    <div class="teaser-navigation row">
+<div class="wrapper template-job-overview">
+
+<!-- <h1 class="heading-section heading-underline text-blue"><span>Lediga jobb</span></h1> -->
+<br>
+
+	<div class="group-primary group-primary--xl">
+		<div class="form form--large">
+			<div class="row">
+				<div class="col form-inline form-big-input">
+					<label class="label"><strong>Vad for jobb?</strong></label>
+					<input type="text" placeholder="Placeholder" />
+				</div>
+				<div class="col form-inline form-big-input">
+					<label class="label"><strong>Vad for jobb?</strong></label>
+					<input type="text" placeholder="Placeholder" />
+				</div>
+				<div class="col form-inline form-big-input">
+					<label class="label"><strong>&nbsp;</strong></label>
+					<button class="form-btn-blue">Sök</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="form">
+
+			<a href="#" class="lightbox-caller" data-lightbox-wrapper=".lightbox-content-report">
+				<button class="form-btn-blue btn--small">Skapa jobbevakning</button>
+			</a>
+
+		</div>
+
+		<div class="lightbox-wrapper lightbox-content-report" load-state="inactive">
+			<div class="lightbox-wrapper-table">
+				<div class="lightbox-wrapper-cell">
+					<div class="lightbox-content lightbox-content--dmjobb">
+
+						<div class="lightbox-close" lightbox-close>
+							<button>close</button>
+						</div>
+
+						<h1 class="heading heavy">Skapa jobbevakning</h1>
+
+						<p>Bevaka sökningen och få ett mail när det dyker upp nya jobb med dessa sök-kriterier:</p>
+
+						<br>
+						<div class="form">
+							<div class="row">
+
+								<div class="col">
+									<label>
+										<strong>Vad för jobb?</strong>
+									</label>
+									<input type="text" placeholder="Beskrivning">
+								</div>
+
+								<div class="col">
+									<label>
+										<strong>Var någonstans?</strong>
+									</label>
+									<input type="text" placeholder="Beskrivning">
+								</div>
+
+							</div>
+						</div>
+
+						<div class="form">
+
+							<div class="row form-inline form-large-input">
+								<label>
+									<strong>Fyll i din e-postadress</strong>
+								</label>
+								<input type="text" placeholder="E-post">
+								<button class="btn btn-big blue">Bevaka</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="group-primary">
+		<div class="teaser teaser-result">
+	<p class="h3"><span class="text-blue">Sökresultat:</span> 60 lediga jobb</p>
+</div>
+
+
+		<div class="teaser-filter">
+	<div class="form">
+		<div class="row">
+				<div class="col">
+					<label class="label"><strong>Input label</strong></label>
+					<select class="select2" style="width: 100%;">
+						<option value="">Senaste</option>
+						<option value="1">Dropdown</option>
+						<option value="2">Dropdown</option>
+					</select>
+				</div>
+				<div class="col">
+						<label class="label"><strong>Input label</strong></label>
+						<select class="select2" style="width: 100%;">
+						<option value="">Ala Kategorier</option>
+						<option value="1">Dropdown</option>
+						<option value="2">Dropdown</option>
+					</select>
+				</div>
+				<div class="col">
+					<label class="label"><strong>&nbsp;</strong></label>
+					<input class="btn btn-big gradient" type="submit" value="FILTRERA" />
+				</div>
+			</div>
+	</div>
+</div>
+
+
+		<div class="teaser-navigation row">
 	<div class="col left">1 - 6 av 14</div>
 	<div class="col right">
 		<a href="#">« Föregående</a>
 		<a href="#">1</a>
 		<a href="#">2</a>
 		<a href="#">3</a>
-		<a href="#">Nästa »</a> 
+		<a href="#">Nästa »</a>
 	</div>
 </div>
 
-    <div class="teaser teaser-job">
+		<div class="teaser teaser-job">
 	<ul class="teaser-list">
 		<li class="row">
 			<div class="col image">
@@ -610,7 +678,7 @@
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
 				</a>
 			</div>
@@ -624,9 +692,9 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 		<li class="row">
@@ -638,9 +706,9 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 		<li class="row">
@@ -652,9 +720,9 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 		<li class="row">
@@ -666,9 +734,9 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 		<li class="row">
@@ -680,9 +748,9 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 		<li class="row">
@@ -694,45 +762,43 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="col text">
 				<p class="teaser-text">Publiceringsdatum: 2014-10-01</p>
 				<a href="#">
-					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare, 
+					<p class="teaser-title"><strong>ST-läkare alt. vikarierande underläkare,
 Rehabiliteringskliniken Halmstad</strong></p>
-				</a>			
+				</a>
 			</div>
 		</li>
 	</ul>
 </div>
 
-    <div class="teaser-navigation row">
+
+		<div class="teaser-navigation row">
 	<div class="col left">1 - 6 av 14</div>
 	<div class="col right">
 		<a href="#">« Föregående</a>
 		<a href="#">1</a>
 		<a href="#">2</a>
 		<a href="#">3</a>
-		<a href="#">Nästa »</a> 
+		<a href="#">Nästa »</a>
 	</div>
 </div>
+	</div>
+	<div class="group-minor">
 
-    <br>
-  </div>
-  <div class="group-minor">
+		<div class="widget-small  ">
+	<p class="widget-title">Bevaka jobben</p>
 
-    <div class="widget-small blue">
-	<p class="widget-title">Registrera dig nu</p>
-	<p>Här kan du registreta dig for vårt nyhetsbrev</p>
-	
-		<p class="widget-interaction">
-			<div class="form">
-				<div class="row form-inline form-small-input">
-					<input type="text" placeholder="E-postadress">
-					<button class="btn dark-blue">Bevaka</button>
-				</div>
-			</div>
-		</p>
-	
+
+
+	<p class="widget-text">Få notiser om alla lediga jobb direkt i din mail</p>
+
+
+		<button class="btn btn--spacing dark-blue">Klicka här</button>
+
+
 </div>
 
-    <div class="widget widget-jobs">
+
+		<div class="widget widget-jobs">
 	<p class="widget-title">På jobbet</p>
 	<ul class="widget-list">
 		<li><a href="#"><p class="widget-text">Avdelningschef Vuxenpsykiatri - Kalmar</p></a></li>
@@ -760,7 +826,7 @@ Rehabiliteringskliniken Halmstad</strong></p>
 	</div>
 </div>
 
-    <div class="widget widget-last-chance">
+		<div class="widget widget-last-chance">
 	<p class="widget-title">Sista chansen</p>
 	<ul class="widget-list">
 		<li>
@@ -799,26 +865,32 @@ Rehabiliteringskliniken Halmstad</strong></p>
 	</div>
 </div>
 
-  </div>
+	</div>
 </div>
+
 
 			<div class="site-footer">
 	<div class="meta-bar">
 		<div class="wrapper">
 			<div class="tagline">
-				
-					<strong>Dagens Medicin</strong> 
+
+
+
+					<strong>Dagens Medicin</strong>
 					för dig som arbetar i hälso- och sjukvården.
-				
+
+
+
 			</div>
 
-			
+
 				<ul class="links">
 					<li><a href="/">Kontakt</a></li>
 					<li><a href="/">Annonsera</a></li>
 					<li><a href="/">Prenumerera</a></li>
 				</ul>
-			
+
+
 		</div>
 	</div>
 
@@ -827,10 +899,13 @@ Rehabiliteringskliniken Halmstad</strong></p>
 			<div class="row">
 
 				<div class="col">
-					<a href="#" class="site-logo">Dagens Medicin</a>					
+					<a href="#" class="site-logo">Dagens Medicin</a>
 				</div>
 
-				
+
+
+
+
 					<div class="col">
 						<p>
 							<strong>Dagens Medicin</strong><br>
@@ -851,7 +926,10 @@ Rehabiliteringskliniken Halmstad</strong></p>
 							Ulf Skarin
 						</p>
 					</div>
-				
+
+
+
+
 			</div>
 		</div>
 	</div>
@@ -864,6 +942,12 @@ Rehabiliteringskliniken Halmstad</strong></p>
 <![endif]-->
 
 <script type="text/javascript" src="js/main.js"></script>
+
+
+	<script type="text/javascript"> window.dagensmedicin = window.dagensmedicin || {}; window.dagensmedicin.user = { loggedIn: true, displayName: "Fredrik von Werder" }; </script>
+
+
+
 
 			<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 			<script src="//platform.linkedin.com/in.js" type="text/javascript">
