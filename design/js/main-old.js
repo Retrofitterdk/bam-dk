@@ -1,15 +1,12 @@
+var BBM = BBM || {};
+
+// caching some often used jQuery objects
+BBM.$ = {
+	win: $(window),
+	body: $('body')
+};
+
 /* Include libraries and plugins */
-
-/*
- * jQuery throttle / debounce - v1.1 - 3/7/2010
- * http://benalman.com/projects/jquery-throttle-debounce-plugin/
- *
- * Copyright (c) 2010 "Cowboy" Ben Alman
- * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
- */
-(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
-
 "function"!==typeof Object.create&&(Object.create=function(f){function g(){}g.prototype=f;return new g});
 (function(f,g,k){var l={init:function(a,b){this.$elem=f(b);this.options=f.extend({},f.fn.owlCarousel.options,this.$elem.data(),a);this.userOptions=a;this.loadContent()},loadContent:function(){function a(a){var d,e="";if("function"===typeof b.options.jsonSuccess)b.options.jsonSuccess.apply(this,[a]);else{for(d in a.owl)a.owl.hasOwnProperty(d)&&(e+=a.owl[d].item);b.$elem.html(e)}b.logIn()}var b=this,e;"function"===typeof b.options.beforeInit&&b.options.beforeInit.apply(this,[b.$elem]);"string"===typeof b.options.jsonPath?
 (e=b.options.jsonPath,f.getJSON(e,a)):b.logIn()},logIn:function(){this.$elem.data("owl-originalStyles",this.$elem.attr("style"));this.$elem.data("owl-originalClasses",this.$elem.attr("class"));this.$elem.css({opacity:0});this.orignalItems=this.options.items;this.checkBrowser();this.wrapperWidth=0;this.checkVisible=null;this.setVars()},setVars:function(){if(0===this.$elem.children().length)return!1;this.baseClass();this.eventTypes();this.$userItems=this.$elem.children();this.itemsAmount=this.$userItems.length;
@@ -3566,50 +3563,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
 }(jQuery));
 
-/*
- Sticky-kit v1.1.2 | WTFPL | Leaf Corcoran 2015 | http://leafo.net
-*/
-(function(){var c,f;c=this.jQuery||window.jQuery;f=c(window);c.fn.stick_in_parent=function(b){var A,w,J,n,B,K,p,q,L,k,E,t;null==b&&(b={});t=b.sticky_class;B=b.inner_scrolling;E=b.recalc_every;k=b.parent;q=b.offset_top;p=b.spacer;w=b.bottoming;null==q&&(q=0);null==k&&(k=void 0);null==B&&(B=!0);null==t&&(t="is_stuck");A=c(document);null==w&&(w=!0);L=function(a){var b;return window.getComputedStyle?(a=window.getComputedStyle(a[0]),b=parseFloat(a.getPropertyValue("width"))+parseFloat(a.getPropertyValue("margin-left"))+
-parseFloat(a.getPropertyValue("margin-right")),"border-box"!==a.getPropertyValue("box-sizing")&&(b+=parseFloat(a.getPropertyValue("border-left-width"))+parseFloat(a.getPropertyValue("border-right-width"))+parseFloat(a.getPropertyValue("padding-left"))+parseFloat(a.getPropertyValue("padding-right"))),b):a.outerWidth(!0)};J=function(a,b,n,C,F,u,r,G){var v,H,m,D,I,d,g,x,y,z,h,l;if(!a.data("sticky_kit")){a.data("sticky_kit",!0);I=A.height();g=a.parent();null!=k&&(g=g.closest(k));if(!g.length)throw"failed to find stick parent";
-v=m=!1;(h=null!=p?p&&a.closest(p):c("<div />"))&&h.css("position",a.css("position"));x=function(){var d,f,e;if(!G&&(I=A.height(),d=parseInt(g.css("border-top-width"),10),f=parseInt(g.css("padding-top"),10),b=parseInt(g.css("padding-bottom"),10),n=g.offset().top+d+f,C=g.height(),m&&(v=m=!1,null==p&&(a.insertAfter(h),h.detach()),a.css({position:"",top:"",width:"",bottom:""}).removeClass(t),e=!0),F=a.offset().top-(parseInt(a.css("margin-top"),10)||0)-q,u=a.outerHeight(!0),r=a.css("float"),h&&h.css({width:L(a),
-height:u,display:a.css("display"),"vertical-align":a.css("vertical-align"),"float":r}),e))return l()};x();if(u!==C)return D=void 0,d=q,z=E,l=function(){var c,l,e,k;if(!G&&(e=!1,null!=z&&(--z,0>=z&&(z=E,x(),e=!0)),e||A.height()===I||x(),e=f.scrollTop(),null!=D&&(l=e-D),D=e,m?(w&&(k=e+u+d>C+n,v&&!k&&(v=!1,a.css({position:"fixed",bottom:"",top:d}).trigger("sticky_kit:unbottom"))),e<F&&(m=!1,d=q,null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),h.detach()),c={position:"",width:"",top:""},a.css(c).removeClass(t).trigger("sticky_kit:unstick")),
-B&&(c=f.height(),u+q>c&&!v&&(d-=l,d=Math.max(c-u,d),d=Math.min(q,d),m&&a.css({top:d+"px"})))):e>F&&(m=!0,c={position:"fixed",top:d},c.width="border-box"===a.css("box-sizing")?a.outerWidth()+"px":a.width()+"px",a.css(c).addClass(t),null==p&&(a.after(h),"left"!==r&&"right"!==r||h.append(a)),a.trigger("sticky_kit:stick")),m&&w&&(null==k&&(k=e+u+d>C+n),!v&&k)))return v=!0,"static"===g.css("position")&&g.css({position:"relative"}),a.css({position:"absolute",bottom:b,top:"auto"}).trigger("sticky_kit:bottom")},
-y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scroll",l);f.off("resize",y);c(document.body).off("sticky_kit:recalc",y);a.off("sticky_kit:detach",H);a.removeData("sticky_kit");a.css({position:"",bottom:"",top:"",width:""});g.position("position","");if(m)return null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),h.remove()),a.removeClass(t)},f.on("touchmove",l),f.on("scroll",l),f.on("resize",y),c(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTimeout(l,
-0)}};n=0;for(K=this.length;n<K;n++)b=this[n],J(c(b));return this}}).call(this);
 
-(function(global,factory){if(typeof exports==="object"&&exports){factory(exports)}else if(typeof define==="function"&&define.amd){define(["exports"],factory)}else{factory(global.Mustache={})}})(this,function(mustache){var Object_toString=Object.prototype.toString;var isArray=Array.isArray||function(object){return Object_toString.call(object)==="[object Array]"};function isFunction(object){return typeof object==="function"}function escapeRegExp(string){return string.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g,"\\$&")}var RegExp_test=RegExp.prototype.test;function testRegExp(re,string){return RegExp_test.call(re,string)}var nonSpaceRe=/\S/;function isWhitespace(string){return!testRegExp(nonSpaceRe,string)}var entityMap={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","/":"&#x2F;"};function escapeHtml(string){return String(string).replace(/[&<>"'\/]/g,function(s){return entityMap[s]})}var whiteRe=/\s*/;var spaceRe=/\s+/;var equalsRe=/\s*=/;var curlyRe=/\s*\}/;var tagRe=/#|\^|\/|>|\{|&|=|!/;function parseTemplate(template,tags){if(!template)return[];var sections=[];var tokens=[];var spaces=[];var hasTag=false;var nonSpace=false;function stripSpace(){if(hasTag&&!nonSpace){while(spaces.length)delete tokens[spaces.pop()]}else{spaces=[]}hasTag=false;nonSpace=false}var openingTagRe,closingTagRe,closingCurlyRe;function compileTags(tags){if(typeof tags==="string")tags=tags.split(spaceRe,2);if(!isArray(tags)||tags.length!==2)throw new Error("Invalid tags: "+tags);openingTagRe=new RegExp(escapeRegExp(tags[0])+"\\s*");closingTagRe=new RegExp("\\s*"+escapeRegExp(tags[1]));closingCurlyRe=new RegExp("\\s*"+escapeRegExp("}"+tags[1]))}compileTags(tags||mustache.tags);var scanner=new Scanner(template);var start,type,value,chr,token,openSection;while(!scanner.eos()){start=scanner.pos;value=scanner.scanUntil(openingTagRe);if(value){for(var i=0,valueLength=value.length;i<valueLength;++i){chr=value.charAt(i);if(isWhitespace(chr)){spaces.push(tokens.length)}else{nonSpace=true}tokens.push(["text",chr,start,start+1]);start+=1;if(chr==="\n")stripSpace()}}if(!scanner.scan(openingTagRe))break;hasTag=true;type=scanner.scan(tagRe)||"name";scanner.scan(whiteRe);if(type==="="){value=scanner.scanUntil(equalsRe);scanner.scan(equalsRe);scanner.scanUntil(closingTagRe)}else if(type==="{"){value=scanner.scanUntil(closingCurlyRe);scanner.scan(curlyRe);scanner.scanUntil(closingTagRe);type="&"}else{value=scanner.scanUntil(closingTagRe)}if(!scanner.scan(closingTagRe))throw new Error("Unclosed tag at "+scanner.pos);token=[type,value,start,scanner.pos];tokens.push(token);if(type==="#"||type==="^"){sections.push(token)}else if(type==="/"){openSection=sections.pop();if(!openSection)throw new Error('Unopened section "'+value+'" at '+start);if(openSection[1]!==value)throw new Error('Unclosed section "'+openSection[1]+'" at '+start)}else if(type==="name"||type==="{"||type==="&"){nonSpace=true}else if(type==="="){compileTags(value)}}openSection=sections.pop();if(openSection)throw new Error('Unclosed section "'+openSection[1]+'" at '+scanner.pos);return nestTokens(squashTokens(tokens))}function squashTokens(tokens){var squashedTokens=[];var token,lastToken;for(var i=0,numTokens=tokens.length;i<numTokens;++i){token=tokens[i];if(token){if(token[0]==="text"&&lastToken&&lastToken[0]==="text"){lastToken[1]+=token[1];lastToken[3]=token[3]}else{squashedTokens.push(token);lastToken=token}}}return squashedTokens}function nestTokens(tokens){var nestedTokens=[];var collector=nestedTokens;var sections=[];var token,section;for(var i=0,numTokens=tokens.length;i<numTokens;++i){token=tokens[i];switch(token[0]){case"#":case"^":collector.push(token);sections.push(token);collector=token[4]=[];break;case"/":section=sections.pop();section[5]=token[2];collector=sections.length>0?sections[sections.length-1][4]:nestedTokens;break;default:collector.push(token)}}return nestedTokens}function Scanner(string){this.string=string;this.tail=string;this.pos=0}Scanner.prototype.eos=function(){return this.tail===""};Scanner.prototype.scan=function(re){var match=this.tail.match(re);if(!match||match.index!==0)return"";var string=match[0];this.tail=this.tail.substring(string.length);this.pos+=string.length;return string};Scanner.prototype.scanUntil=function(re){var index=this.tail.search(re),match;switch(index){case-1:match=this.tail;this.tail="";break;case 0:match="";break;default:match=this.tail.substring(0,index);this.tail=this.tail.substring(index)}this.pos+=match.length;return match};function Context(view,parentContext){this.view=view;this.cache={".":this.view};this.parent=parentContext}Context.prototype.push=function(view){return new Context(view,this)};Context.prototype.lookup=function(name){var cache=this.cache;var value;if(name in cache){value=cache[name]}else{var context=this,names,index,lookupHit=false;while(context){if(name.indexOf(".")>0){value=context.view;names=name.split(".");index=0;while(value!=null&&index<names.length){if(index===names.length-1&&value!=null)lookupHit=typeof value==="object"&&value.hasOwnProperty(names[index]);value=value[names[index++]]}}else if(context.view!=null&&typeof context.view==="object"){value=context.view[name];lookupHit=context.view.hasOwnProperty(name)}if(lookupHit)break;context=context.parent}cache[name]=value}if(isFunction(value))value=value.call(this.view);return value};function Writer(){this.cache={}}Writer.prototype.clearCache=function(){this.cache={}};Writer.prototype.parse=function(template,tags){var cache=this.cache;var tokens=cache[template];if(tokens==null)tokens=cache[template]=parseTemplate(template,tags);return tokens};Writer.prototype.render=function(template,view,partials){var tokens=this.parse(template);var context=view instanceof Context?view:new Context(view);return this.renderTokens(tokens,context,partials,template)};Writer.prototype.renderTokens=function(tokens,context,partials,originalTemplate){var buffer="";var token,symbol,value;for(var i=0,numTokens=tokens.length;i<numTokens;++i){value=undefined;token=tokens[i];symbol=token[0];if(symbol==="#")value=this._renderSection(token,context,partials,originalTemplate);else if(symbol==="^")value=this._renderInverted(token,context,partials,originalTemplate);else if(symbol===">")value=this._renderPartial(token,context,partials,originalTemplate);else if(symbol==="&")value=this._unescapedValue(token,context);else if(symbol==="name")value=this._escapedValue(token,context);else if(symbol==="text")value=this._rawValue(token);if(value!==undefined)buffer+=value}return buffer};Writer.prototype._renderSection=function(token,context,partials,originalTemplate){var self=this;var buffer="";var value=context.lookup(token[1]);function subRender(template){return self.render(template,context,partials)}if(!value)return;if(isArray(value)){for(var j=0,valueLength=value.length;j<valueLength;++j){buffer+=this.renderTokens(token[4],context.push(value[j]),partials,originalTemplate)}}else if(typeof value==="object"||typeof value==="string"||typeof value==="number"){buffer+=this.renderTokens(token[4],context.push(value),partials,originalTemplate)}else if(isFunction(value)){if(typeof originalTemplate!=="string")throw new Error("Cannot use higher-order sections without the original template");value=value.call(context.view,originalTemplate.slice(token[3],token[5]),subRender);if(value!=null)buffer+=value}else{buffer+=this.renderTokens(token[4],context,partials,originalTemplate)}return buffer};Writer.prototype._renderInverted=function(token,context,partials,originalTemplate){var value=context.lookup(token[1]);if(!value||isArray(value)&&value.length===0)return this.renderTokens(token[4],context,partials,originalTemplate)};Writer.prototype._renderPartial=function(token,context,partials){if(!partials)return;var value=isFunction(partials)?partials(token[1]):partials[token[1]];if(value!=null)return this.renderTokens(this.parse(value),context,partials,value)};Writer.prototype._unescapedValue=function(token,context){var value=context.lookup(token[1]);if(value!=null)return value};Writer.prototype._escapedValue=function(token,context){var value=context.lookup(token[1]);if(value!=null)return mustache.escape(value)};Writer.prototype._rawValue=function(token){return token[1]};mustache.name="mustache.js";mustache.version="2.0.0";mustache.tags=["{{","}}"];var defaultWriter=new Writer;mustache.clearCache=function(){return defaultWriter.clearCache()};mustache.parse=function(template,tags){return defaultWriter.parse(template,tags)};mustache.render=function(template,view,partials){return defaultWriter.render(template,view,partials)};mustache.to_html=function(template,view,partials,send){var result=mustache.render(template,view,partials);if(isFunction(send)){send(result)}else{return result}};mustache.escape=escapeHtml;mustache.Scanner=Scanner;mustache.Context=Context;mustache.Writer=Writer});
-
-/*!
- * Datepicker for Bootstrap v1.5.0-dev (https://github.com/eternicode/bootstrap-datepicker)
- *
- * Copyright 2012 Stefan Petre
- * Improvements by Andrew Rowls
- * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
- */
-!function(a,b){function c(){return new Date(Date.UTC.apply(Date,arguments))}function d(){var a=new Date;return c(a.getFullYear(),a.getMonth(),a.getDate())}function e(a,b){return a.getUTCFullYear()===b.getUTCFullYear()&&a.getUTCMonth()===b.getUTCMonth()&&a.getUTCDate()===b.getUTCDate()}function f(a){return function(){return this[a].apply(this,arguments)}}function g(b,c){function d(a,b){return b.toLowerCase()}var e,f=a(b).data(),g={},h=new RegExp("^"+c.toLowerCase()+"([A-Z])");c=new RegExp("^"+c.toLowerCase());for(var i in f)c.test(i)&&(e=i.replace(h,d),g[e]=f[i]);return g}function h(b){var c={};if(p[b]||(b=b.split("-")[0],p[b])){var d=p[b];return a.each(o,function(a,b){b in d&&(c[b]=d[b])}),c}}var i=function(){var b={get:function(a){return this.slice(a)[0]},contains:function(a){for(var b=a&&a.valueOf(),c=0,d=this.length;d>c;c++)if(this[c].valueOf()===b)return c;return-1},remove:function(a){this.splice(a,1)},replace:function(b){b&&(a.isArray(b)||(b=[b]),this.clear(),this.push.apply(this,b))},clear:function(){this.length=0},copy:function(){var a=new i;return a.replace(this),a}};return function(){var c=[];return c.push.apply(c,arguments),a.extend(c,b),c}}(),j=function(b,c){this._process_options(c),this.dates=new i,this.viewDate=this.o.defaultViewDate,this.focusDate=null,this.element=a(b),this.isInline=!1,this.isInput=this.element.is("input"),this.component=this.element.hasClass("date")?this.element.find(".add-on, .input-group-addon, .btn"):!1,this.hasInput=this.component&&this.element.find("input").length,this.component&&0===this.component.length&&(this.component=!1),this.picker=a(q.template),this._buildEvents(),this._attachEvents(),this.isInline?this.picker.addClass("datepicker-inline").appendTo(this.element):this.picker.addClass("datepicker-dropdown dropdown-menu"),this.o.rtl&&this.picker.addClass("datepicker-rtl"),this.viewMode=this.o.startView,this.o.calendarWeeks&&this.picker.find("tfoot .today, tfoot .clear").attr("colspan",function(a,b){return parseInt(b)+1}),this._allow_update=!1,this.setStartDate(this._o.startDate),this.setEndDate(this._o.endDate),this.setDaysOfWeekDisabled(this.o.daysOfWeekDisabled),this.setDatesDisabled(this.o.datesDisabled),this.fillDow(),this.fillMonths(),this._allow_update=!0,this.update(),this.showMode(),this.isInline&&this.show()};j.prototype={constructor:j,_process_options:function(e){this._o=a.extend({},this._o,e);var f=this.o=a.extend({},this._o),g=f.language;switch(p[g]||(g=g.split("-")[0],p[g]||(g=n.language)),f.language=g,f.startView){case 2:case"decade":f.startView=2;break;case 1:case"year":f.startView=1;break;default:f.startView=0}switch(f.minViewMode){case 1:case"months":f.minViewMode=1;break;case 2:case"years":f.minViewMode=2;break;default:f.minViewMode=0}f.startView=Math.max(f.startView,f.minViewMode),f.multidate!==!0&&(f.multidate=Number(f.multidate)||!1,f.multidate!==!1&&(f.multidate=Math.max(0,f.multidate))),f.multidateSeparator=String(f.multidateSeparator),f.weekStart%=7,f.weekEnd=(f.weekStart+6)%7;var h=q.parseFormat(f.format);if(f.startDate!==-1/0&&(f.startDate=f.startDate?f.startDate instanceof Date?this._local_to_utc(this._zero_time(f.startDate)):q.parseDate(f.startDate,h,f.language):-1/0),1/0!==f.endDate&&(f.endDate=f.endDate?f.endDate instanceof Date?this._local_to_utc(this._zero_time(f.endDate)):q.parseDate(f.endDate,h,f.language):1/0),f.daysOfWeekDisabled=f.daysOfWeekDisabled||[],a.isArray(f.daysOfWeekDisabled)||(f.daysOfWeekDisabled=f.daysOfWeekDisabled.split(/[,\s]*/)),f.daysOfWeekDisabled=a.map(f.daysOfWeekDisabled,function(a){return parseInt(a,10)}),f.datesDisabled=f.datesDisabled||[],!a.isArray(f.datesDisabled)){var i=[];i.push(q.parseDate(f.datesDisabled,h,f.language)),f.datesDisabled=i}f.datesDisabled=a.map(f.datesDisabled,function(a){return q.parseDate(a,h,f.language)});var j=String(f.orientation).toLowerCase().split(/\s+/g),k=f.orientation.toLowerCase();if(j=a.grep(j,function(a){return/^auto|left|right|top|bottom$/.test(a)}),f.orientation={x:"auto",y:"auto"},k&&"auto"!==k)if(1===j.length)switch(j[0]){case"top":case"bottom":f.orientation.y=j[0];break;case"left":case"right":f.orientation.x=j[0]}else k=a.grep(j,function(a){return/^left|right$/.test(a)}),f.orientation.x=k[0]||"auto",k=a.grep(j,function(a){return/^top|bottom$/.test(a)}),f.orientation.y=k[0]||"auto";else;if(f.defaultViewDate){var l=f.defaultViewDate.year||(new Date).getFullYear(),m=f.defaultViewDate.month||0,o=f.defaultViewDate.day||1;f.defaultViewDate=c(l,m,o)}else f.defaultViewDate=d();f.showOnFocus=f.showOnFocus!==b?f.showOnFocus:!0},_events:[],_secondaryEvents:[],_applyEvents:function(a){for(var c,d,e,f=0;f<a.length;f++)c=a[f][0],2===a[f].length?(d=b,e=a[f][1]):3===a[f].length&&(d=a[f][1],e=a[f][2]),c.on(e,d)},_unapplyEvents:function(a){for(var c,d,e,f=0;f<a.length;f++)c=a[f][0],2===a[f].length?(e=b,d=a[f][1]):3===a[f].length&&(e=a[f][1],d=a[f][2]),c.off(d,e)},_buildEvents:function(){var b={keyup:a.proxy(function(b){-1===a.inArray(b.keyCode,[27,37,39,38,40,32,13,9])&&this.update()},this),keydown:a.proxy(this.keydown,this),paste:a.proxy(this.paste,this)};this.o.showOnFocus===!0&&(b.focus=a.proxy(this.show,this)),this.isInput?this._events=[[this.element,b]]:this.component&&this.hasInput?this._events=[[this.element.find("input"),b],[this.component,{click:a.proxy(this.show,this)}]]:this.element.is("div")?this.isInline=!0:this._events=[[this.element,{click:a.proxy(this.show,this)}]],this._events.push([this.element,"*",{blur:a.proxy(function(a){this._focused_from=a.target},this)}],[this.element,{blur:a.proxy(function(a){this._focused_from=a.target},this)}]),this.o.immediateUpdates&&this._events.push([this.element,{"changeYear changeMonth":a.proxy(function(a){this.update(a.date)},this)}]),this._secondaryEvents=[[this.picker,{click:a.proxy(this.click,this)}],[a(window),{resize:a.proxy(this.place,this)}],[a(document),{mousedown:a.proxy(function(b){this.element.is(b.target)||this.element.find(b.target).length||this.picker.is(b.target)||this.picker.find(b.target).length||a(this.picker).hide()},this)}]]},_attachEvents:function(){this._detachEvents(),this._applyEvents(this._events)},_detachEvents:function(){this._unapplyEvents(this._events)},_attachSecondaryEvents:function(){this._detachSecondaryEvents(),this._applyEvents(this._secondaryEvents)},_detachSecondaryEvents:function(){this._unapplyEvents(this._secondaryEvents)},_trigger:function(b,c){var d=c||this.dates.get(-1),e=this._utc_to_local(d);this.element.trigger({type:b,date:e,dates:a.map(this.dates,this._utc_to_local),format:a.proxy(function(a,b){0===arguments.length?(a=this.dates.length-1,b=this.o.format):"string"==typeof a&&(b=a,a=this.dates.length-1),b=b||this.o.format;var c=this.dates.get(a);return q.formatDate(c,b,this.o.language)},this)})},show:function(){return this.element.attr("readonly")&&this.o.enableOnReadonly===!1?void 0:(this.isInline||this.picker.appendTo(this.o.container),this.place(),this.picker.show(),this._attachSecondaryEvents(),this._trigger("show"),(window.navigator.msMaxTouchPoints||"ontouchstart"in document)&&this.o.disableTouchKeyboard&&a(this.element).blur(),this)},hide:function(){return this.isInline?this:this.picker.is(":visible")?(this.focusDate=null,this.picker.hide().detach(),this._detachSecondaryEvents(),this.viewMode=this.o.startView,this.showMode(),this.o.forceParse&&(this.isInput&&this.element.val()||this.hasInput&&this.element.find("input").val())&&this.setValue(),this._trigger("hide"),this):this},remove:function(){return this.hide(),this._detachEvents(),this._detachSecondaryEvents(),this.picker.remove(),delete this.element.data().datepicker,this.isInput||delete this.element.data().date,this},paste:function(b){var c;if(b.originalEvent.clipboardData&&b.originalEvent.clipboardData.types&&-1!==a.inArray("text/plain",b.originalEvent.clipboardData.types))c=b.originalEvent.clipboardData.getData("text/plain");else{if(!window.clipboardData)return;c=window.clipboardData.getData("Text")}this.setDate(c),this.update(),b.preventDefault()},_utc_to_local:function(a){return a&&new Date(a.getTime()+6e4*a.getTimezoneOffset())},_local_to_utc:function(a){return a&&new Date(a.getTime()-6e4*a.getTimezoneOffset())},_zero_time:function(a){return a&&new Date(a.getFullYear(),a.getMonth(),a.getDate())},_zero_utc_time:function(a){return a&&new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),a.getUTCDate()))},getDates:function(){return a.map(this.dates,this._utc_to_local)},getUTCDates:function(){return a.map(this.dates,function(a){return new Date(a)})},getDate:function(){return this._utc_to_local(this.getUTCDate())},getUTCDate:function(){var a=this.dates.get(-1);return"undefined"!=typeof a?new Date(a):null},clearDates:function(){var a;this.isInput?a=this.element:this.component&&(a=this.element.find("input")),a&&a.val("").change(),this.update(),this._trigger("changeDate"),this.o.autoclose&&this.hide()},setDates:function(){var b=a.isArray(arguments[0])?arguments[0]:arguments;return this.update.apply(this,b),this._trigger("changeDate"),this.setValue(),this},setUTCDates:function(){var b=a.isArray(arguments[0])?arguments[0]:arguments;return this.update.apply(this,a.map(b,this._utc_to_local)),this._trigger("changeDate"),this.setValue(),this},setDate:f("setDates"),setUTCDate:f("setUTCDates"),setValue:function(){var a=this.getFormattedDate();return this.isInput?this.element.val(a).change():this.component&&this.element.find("input").val(a).change(),this},getFormattedDate:function(c){c===b&&(c=this.o.format);var d=this.o.language;return a.map(this.dates,function(a){return q.formatDate(a,c,d)}).join(this.o.multidateSeparator)},setStartDate:function(a){return this._process_options({startDate:a}),this.update(),this.updateNavArrows(),this},setEndDate:function(a){return this._process_options({endDate:a}),this.update(),this.updateNavArrows(),this},setDaysOfWeekDisabled:function(a){return this._process_options({daysOfWeekDisabled:a}),this.update(),this.updateNavArrows(),this},setDatesDisabled:function(a){this._process_options({datesDisabled:a}),this.update(),this.updateNavArrows()},place:function(){if(this.isInline)return this;var b=this.picker.outerWidth(),c=this.picker.outerHeight(),d=10,e=a(this.o.container).width(),f=a(this.o.container).height(),g=a(this.o.container).scrollTop(),h=a(this.o.container).offset(),i=[];this.element.parents().each(function(){var b=a(this).css("z-index");"auto"!==b&&0!==b&&i.push(parseInt(b))});var j=Math.max.apply(Math,i)+10,k=this.component?this.component.parent().offset():this.element.offset(),l=this.component?this.component.outerHeight(!0):this.element.outerHeight(!1),m=this.component?this.component.outerWidth(!0):this.element.outerWidth(!1),n=k.left-h.left,o=k.top-h.top;this.picker.removeClass("datepicker-orient-top datepicker-orient-bottom datepicker-orient-right datepicker-orient-left"),"auto"!==this.o.orientation.x?(this.picker.addClass("datepicker-orient-"+this.o.orientation.x),"right"===this.o.orientation.x&&(n-=b-m)):k.left<0?(this.picker.addClass("datepicker-orient-left"),n-=k.left-d):n+b>e?(this.picker.addClass("datepicker-orient-right"),n=k.left+m-b):this.picker.addClass("datepicker-orient-left");var p,q,r=this.o.orientation.y;if("auto"===r&&(p=-g+o-c,q=g+f-(o+l+c),r=Math.max(p,q)===q?"top":"bottom"),this.picker.addClass("datepicker-orient-"+r),"top"===r?o+=l:o-=c+parseInt(this.picker.css("padding-top")),this.o.rtl){var s=e-(n+m);this.picker.css({top:o,right:s,zIndex:j})}else this.picker.css({top:o,left:n,zIndex:j});return this},_allow_update:!0,update:function(){if(!this._allow_update)return this;var b=this.dates.copy(),c=[],d=!1;return arguments.length?(a.each(arguments,a.proxy(function(a,b){b instanceof Date&&(b=this._local_to_utc(b)),c.push(b)},this)),d=!0):(c=this.isInput?this.element.val():this.element.data("date")||this.element.find("input").val(),c=c&&this.o.multidate?c.split(this.o.multidateSeparator):[c],delete this.element.data().date),c=a.map(c,a.proxy(function(a){return q.parseDate(a,this.o.format,this.o.language)},this)),c=a.grep(c,a.proxy(function(a){return a<this.o.startDate||a>this.o.endDate||!a},this),!0),this.dates.replace(c),this.dates.length?this.viewDate=new Date(this.dates.get(-1)):this.viewDate<this.o.startDate?this.viewDate=new Date(this.o.startDate):this.viewDate>this.o.endDate&&(this.viewDate=new Date(this.o.endDate)),d?this.setValue():c.length&&String(b)!==String(this.dates)&&this._trigger("changeDate"),!this.dates.length&&b.length&&this._trigger("clearDate"),this.fill(),this},fillDow:function(){var a=this.o.weekStart,b="<tr>";if(this.o.calendarWeeks){this.picker.find(".datepicker-days thead tr:first-child .datepicker-switch").attr("colspan",function(a,b){return parseInt(b)+1});var c='<th class="cw">&#160;</th>';b+=c}for(;a<this.o.weekStart+7;)b+='<th class="dow">'+p[this.o.language].daysMin[a++%7]+"</th>";b+="</tr>",this.picker.find(".datepicker-days thead").append(b)},fillMonths:function(){for(var a="",b=0;12>b;)a+='<span class="month">'+p[this.o.language].monthsShort[b++]+"</span>";this.picker.find(".datepicker-months td").html(a)},setRange:function(b){b&&b.length?this.range=a.map(b,function(a){return a.valueOf()}):delete this.range,this.fill()},getClassNames:function(b){var c=[],d=this.viewDate.getUTCFullYear(),f=this.viewDate.getUTCMonth(),g=new Date;return b.getUTCFullYear()<d||b.getUTCFullYear()===d&&b.getUTCMonth()<f?c.push("old"):(b.getUTCFullYear()>d||b.getUTCFullYear()===d&&b.getUTCMonth()>f)&&c.push("new"),this.focusDate&&b.valueOf()===this.focusDate.valueOf()&&c.push("focused"),this.o.todayHighlight&&b.getUTCFullYear()===g.getFullYear()&&b.getUTCMonth()===g.getMonth()&&b.getUTCDate()===g.getDate()&&c.push("today"),-1!==this.dates.contains(b)&&c.push("active"),(b.valueOf()<this.o.startDate||b.valueOf()>this.o.endDate||-1!==a.inArray(b.getUTCDay(),this.o.daysOfWeekDisabled))&&c.push("disabled"),this.o.datesDisabled.length>0&&a.grep(this.o.datesDisabled,function(a){return e(b,a)}).length>0&&c.push("disabled","disabled-date"),this.range&&(b>this.range[0]&&b<this.range[this.range.length-1]&&c.push("range"),-1!==a.inArray(b.valueOf(),this.range)&&c.push("selected")),c},fill:function(){var d,e=new Date(this.viewDate),f=e.getUTCFullYear(),g=e.getUTCMonth(),h=this.o.startDate!==-1/0?this.o.startDate.getUTCFullYear():-1/0,i=this.o.startDate!==-1/0?this.o.startDate.getUTCMonth():-1/0,j=1/0!==this.o.endDate?this.o.endDate.getUTCFullYear():1/0,k=1/0!==this.o.endDate?this.o.endDate.getUTCMonth():1/0,l=p[this.o.language].today||p.en.today||"",m=p[this.o.language].clear||p.en.clear||"";if(!isNaN(f)&&!isNaN(g)){this.picker.find(".datepicker-days thead .datepicker-switch").text(p[this.o.language].months[g]+" "+f),this.picker.find("tfoot .today").text(l).toggle(this.o.todayBtn!==!1),this.picker.find("tfoot .clear").text(m).toggle(this.o.clearBtn!==!1),this.updateNavArrows(),this.fillMonths();var n=c(f,g-1,28),o=q.getDaysInMonth(n.getUTCFullYear(),n.getUTCMonth());n.setUTCDate(o),n.setUTCDate(o-(n.getUTCDay()-this.o.weekStart+7)%7);var r=new Date(n);r.setUTCDate(r.getUTCDate()+42),r=r.valueOf();for(var s,t=[];n.valueOf()<r;){if(n.getUTCDay()===this.o.weekStart&&(t.push("<tr>"),this.o.calendarWeeks)){var u=new Date(+n+(this.o.weekStart-n.getUTCDay()-7)%7*864e5),v=new Date(Number(u)+(11-u.getUTCDay())%7*864e5),w=new Date(Number(w=c(v.getUTCFullYear(),0,1))+(11-w.getUTCDay())%7*864e5),x=(v-w)/864e5/7+1;t.push('<td class="cw">'+x+"</td>")}if(s=this.getClassNames(n),s.push("day"),this.o.beforeShowDay!==a.noop){var y=this.o.beforeShowDay(this._utc_to_local(n));y===b?y={}:"boolean"==typeof y?y={enabled:y}:"string"==typeof y&&(y={classes:y}),y.enabled===!1&&s.push("disabled"),y.classes&&(s=s.concat(y.classes.split(/\s+/))),y.tooltip&&(d=y.tooltip)}s=a.unique(s),t.push('<td class="'+s.join(" ")+'"'+(d?' title="'+d+'"':"")+">"+n.getUTCDate()+"</td>"),d=null,n.getUTCDay()===this.o.weekEnd&&t.push("</tr>"),n.setUTCDate(n.getUTCDate()+1)}this.picker.find(".datepicker-days tbody").empty().append(t.join(""));var z=this.picker.find(".datepicker-months").find("th:eq(1)").text(f).end().find("span").removeClass("active");if(a.each(this.dates,function(a,b){b.getUTCFullYear()===f&&z.eq(b.getUTCMonth()).addClass("active")}),(h>f||f>j)&&z.addClass("disabled"),f===h&&z.slice(0,i).addClass("disabled"),f===j&&z.slice(k+1).addClass("disabled"),this.o.beforeShowMonth!==a.noop){var A=this;a.each(z,function(b,c){if(!a(c).hasClass("disabled")){var d=new Date(f,b,1),e=A.o.beforeShowMonth(d);e===!1&&a(c).addClass("disabled")}})}t="",f=10*parseInt(f/10,10);var B=this.picker.find(".datepicker-years").find("th:eq(1)").text(f+"-"+(f+9)).end().find("td");f-=1;for(var C,D=a.map(this.dates,function(a){return a.getUTCFullYear()}),E=-1;11>E;E++)C=["year"],-1===E?C.push("old"):10===E&&C.push("new"),-1!==a.inArray(f,D)&&C.push("active"),(h>f||f>j)&&C.push("disabled"),t+='<span class="'+C.join(" ")+'">'+f+"</span>",f+=1;B.html(t)}},updateNavArrows:function(){if(this._allow_update){var a=new Date(this.viewDate),b=a.getUTCFullYear(),c=a.getUTCMonth();switch(this.viewMode){case 0:this.picker.find(".prev").css(this.o.startDate!==-1/0&&b<=this.o.startDate.getUTCFullYear()&&c<=this.o.startDate.getUTCMonth()?{visibility:"hidden"}:{visibility:"visible"}),this.picker.find(".next").css(1/0!==this.o.endDate&&b>=this.o.endDate.getUTCFullYear()&&c>=this.o.endDate.getUTCMonth()?{visibility:"hidden"}:{visibility:"visible"});break;case 1:case 2:this.picker.find(".prev").css(this.o.startDate!==-1/0&&b<=this.o.startDate.getUTCFullYear()?{visibility:"hidden"}:{visibility:"visible"}),this.picker.find(".next").css(1/0!==this.o.endDate&&b>=this.o.endDate.getUTCFullYear()?{visibility:"hidden"}:{visibility:"visible"})}}},click:function(b){b.preventDefault();var d,e,f,g=a(b.target).closest("span, td, th");if(1===g.length)switch(g[0].nodeName.toLowerCase()){case"th":switch(g[0].className){case"datepicker-switch":this.showMode(1);break;case"prev":case"next":var h=q.modes[this.viewMode].navStep*("prev"===g[0].className?-1:1);switch(this.viewMode){case 0:this.viewDate=this.moveMonth(this.viewDate,h),this._trigger("changeMonth",this.viewDate);break;case 1:case 2:this.viewDate=this.moveYear(this.viewDate,h),1===this.viewMode&&this._trigger("changeYear",this.viewDate)}this.fill();break;case"today":var i=new Date;i=c(i.getFullYear(),i.getMonth(),i.getDate(),0,0,0),this.showMode(-2);var j="linked"===this.o.todayBtn?null:"view";this._setDate(i,j);break;case"clear":this.clearDates()}break;case"span":g.hasClass("disabled")||(this.viewDate.setUTCDate(1),g.hasClass("month")?(f=1,e=g.parent().find("span").index(g),d=this.viewDate.getUTCFullYear(),this.viewDate.setUTCMonth(e),this._trigger("changeMonth",this.viewDate),1===this.o.minViewMode?(this._setDate(c(d,e,f)),this.showMode()):this.showMode(-1)):(f=1,e=0,d=parseInt(g.text(),10)||0,this.viewDate.setUTCFullYear(d),this._trigger("changeYear",this.viewDate),2===this.o.minViewMode&&this._setDate(c(d,e,f)),this.showMode(-1)),this.fill());break;case"td":g.hasClass("day")&&!g.hasClass("disabled")&&(f=parseInt(g.text(),10)||1,d=this.viewDate.getUTCFullYear(),e=this.viewDate.getUTCMonth(),g.hasClass("old")?0===e?(e=11,d-=1):e-=1:g.hasClass("new")&&(11===e?(e=0,d+=1):e+=1),this._setDate(c(d,e,f)))}this.picker.is(":visible")&&this._focused_from&&a(this._focused_from).focus(),delete this._focused_from},_toggle_multidate:function(a){var b=this.dates.contains(a);if(a||this.dates.clear(),-1!==b?(this.o.multidate===!0||this.o.multidate>1||this.o.toggleActive)&&this.dates.remove(b):this.o.multidate===!1?(this.dates.clear(),this.dates.push(a)):this.dates.push(a),"number"==typeof this.o.multidate)for(;this.dates.length>this.o.multidate;)this.dates.remove(0)},_setDate:function(a,b){b&&"date"!==b||this._toggle_multidate(a&&new Date(a)),b&&"view"!==b||(this.viewDate=a&&new Date(a)),this.fill(),this.setValue(),b&&"view"===b||this._trigger("changeDate");var c;this.isInput?c=this.element:this.component&&(c=this.element.find("input")),c&&c.change(),!this.o.autoclose||b&&"date"!==b||this.hide()},moveMonth:function(a,c){if(!a)return b;if(!c)return a;var d,e,f=new Date(a.valueOf()),g=f.getUTCDate(),h=f.getUTCMonth(),i=Math.abs(c);if(c=c>0?1:-1,1===i)e=-1===c?function(){return f.getUTCMonth()===h}:function(){return f.getUTCMonth()!==d},d=h+c,f.setUTCMonth(d),(0>d||d>11)&&(d=(d+12)%12);else{for(var j=0;i>j;j++)f=this.moveMonth(f,c);d=f.getUTCMonth(),f.setUTCDate(g),e=function(){return d!==f.getUTCMonth()}}for(;e();)f.setUTCDate(--g),f.setUTCMonth(d);return f},moveYear:function(a,b){return this.moveMonth(a,12*b)},dateWithinRange:function(a){return a>=this.o.startDate&&a<=this.o.endDate},keydown:function(a){if(!this.picker.is(":visible"))return void((40===a.keyCode||27===a.keyCode)&&this.show());var b,c,e,f=!1,g=this.focusDate||this.viewDate;switch(a.keyCode){case 27:this.focusDate?(this.focusDate=null,this.viewDate=this.dates.get(-1)||this.viewDate,this.fill()):this.hide(),a.preventDefault();break;case 37:case 39:if(!this.o.keyboardNavigation)break;b=37===a.keyCode?-1:1,a.ctrlKey?(c=this.moveYear(this.dates.get(-1)||d(),b),e=this.moveYear(g,b),this._trigger("changeYear",this.viewDate)):a.shiftKey?(c=this.moveMonth(this.dates.get(-1)||d(),b),e=this.moveMonth(g,b),this._trigger("changeMonth",this.viewDate)):(c=new Date(this.dates.get(-1)||d()),c.setUTCDate(c.getUTCDate()+b),e=new Date(g),e.setUTCDate(g.getUTCDate()+b)),this.dateWithinRange(e)&&(this.focusDate=this.viewDate=e,this.setValue(),this.fill(),a.preventDefault());break;case 38:case 40:if(!this.o.keyboardNavigation)break;b=38===a.keyCode?-1:1,a.ctrlKey?(c=this.moveYear(this.dates.get(-1)||d(),b),e=this.moveYear(g,b),this._trigger("changeYear",this.viewDate)):a.shiftKey?(c=this.moveMonth(this.dates.get(-1)||d(),b),e=this.moveMonth(g,b),this._trigger("changeMonth",this.viewDate)):(c=new Date(this.dates.get(-1)||d()),c.setUTCDate(c.getUTCDate()+7*b),e=new Date(g),e.setUTCDate(g.getUTCDate()+7*b)),this.dateWithinRange(e)&&(this.focusDate=this.viewDate=e,this.setValue(),this.fill(),a.preventDefault());break;case 32:break;case 13:g=this.focusDate||this.dates.get(-1)||this.viewDate,this.o.keyboardNavigation&&(this._toggle_multidate(g),f=!0),this.focusDate=null,this.viewDate=this.dates.get(-1)||this.viewDate,this.setValue(),this.fill(),this.picker.is(":visible")&&(a.preventDefault(),"function"==typeof a.stopPropagation?a.stopPropagation():a.cancelBubble=!0,this.o.autoclose&&this.hide());break;case 9:this.focusDate=null,this.viewDate=this.dates.get(-1)||this.viewDate,this.fill(),this.hide()}if(f){this._trigger(this.dates.length?"changeDate":"clearDate");var h;this.isInput?h=this.element:this.component&&(h=this.element.find("input")),h&&h.change()}},showMode:function(a){a&&(this.viewMode=Math.max(this.o.minViewMode,Math.min(2,this.viewMode+a))),this.picker.children("div").hide().filter(".datepicker-"+q.modes[this.viewMode].clsName).css("display","block"),this.updateNavArrows()}};var k=function(b,c){this.element=a(b),this.inputs=a.map(c.inputs,function(a){return a.jquery?a[0]:a}),delete c.inputs,m.call(a(this.inputs),c).on("changeDate",a.proxy(this.dateUpdated,this)),this.pickers=a.map(this.inputs,function(b){return a(b).data("datepicker")}),this.updateDates()};k.prototype={updateDates:function(){this.dates=a.map(this.pickers,function(a){return a.getUTCDate()}),this.updateRanges()},updateRanges:function(){var b=a.map(this.dates,function(a){return a.valueOf()});a.each(this.pickers,function(a,c){c.setRange(b)})},dateUpdated:function(b){if(!this.updating){this.updating=!0;var c=a(b.target).data("datepicker"),d=c.getUTCDate(),e=a.inArray(b.target,this.inputs),f=e-1,g=e+1,h=this.inputs.length;if(-1!==e){if(a.each(this.pickers,function(a,b){b.getUTCDate()||b.setUTCDate(d)}),d<this.dates[f])for(;f>=0&&d<this.dates[f];)this.pickers[f--].setUTCDate(d);else if(d>this.dates[g])for(;h>g&&d>this.dates[g];)this.pickers[g++].setUTCDate(d);this.updateDates(),delete this.updating}}},remove:function(){a.map(this.pickers,function(a){a.remove()}),delete this.element.data().datepicker}};var l=a.fn.datepicker,m=function(c){var d=Array.apply(null,arguments);d.shift();var e;return this.each(function(){var f=a(this),i=f.data("datepicker"),l="object"==typeof c&&c;if(!i){var m=g(this,"date"),o=a.extend({},n,m,l),p=h(o.language),q=a.extend({},n,p,m,l);if(f.hasClass("input-daterange")||q.inputs){var r={inputs:q.inputs||f.find("input").toArray()};f.data("datepicker",i=new k(this,a.extend(q,r)))}else f.data("datepicker",i=new j(this,q))}return"string"==typeof c&&"function"==typeof i[c]&&(e=i[c].apply(i,d),e!==b)?!1:void 0}),e!==b?e:this};a.fn.datepicker=m;var n=a.fn.datepicker.defaults={autoclose:!1,beforeShowDay:a.noop,beforeShowMonth:a.noop,calendarWeeks:!1,clearBtn:!1,toggleActive:!1,daysOfWeekDisabled:[],datesDisabled:[],endDate:1/0,forceParse:!0,format:"mm/dd/yyyy",keyboardNavigation:!0,language:"en",minViewMode:0,multidate:!1,multidateSeparator:",",orientation:"auto",rtl:!1,startDate:-1/0,startView:0,todayBtn:!1,todayHighlight:!1,weekStart:0,disableTouchKeyboard:!1,enableOnReadonly:!0,container:"body",immediateUpdates:!1},o=a.fn.datepicker.locale_opts=["format","rtl","weekStart"];a.fn.datepicker.Constructor=j;var p=a.fn.datepicker.dates={en:{days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],daysShort:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],daysMin:["Su","Mo","Tu","We","Th","Fr","Sa"],months:["January","February","March","April","May","June","July","August","September","October","November","December"],monthsShort:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],today:"Today",clear:"Clear"}},q={modes:[{clsName:"days",navFnc:"Month",navStep:1},{clsName:"months",navFnc:"FullYear",navStep:1},{clsName:"years",navFnc:"FullYear",navStep:10}],isLeapYear:function(a){return a%4===0&&a%100!==0||a%400===0},getDaysInMonth:function(a,b){return[31,q.isLeapYear(a)?29:28,31,30,31,30,31,31,30,31,30,31][b]},validParts:/dd?|DD?|mm?|MM?|yy(?:yy)?/g,nonpunctuation:/[^ -\/:-@\[\u3400-\u9fff-`{-~\t\n\r]+/g,parseFormat:function(a){var b=a.replace(this.validParts,"\x00").split("\x00"),c=a.match(this.validParts);if(!b||!b.length||!c||0===c.length)throw new Error("Invalid date format.");return{separators:b,parts:c}},parseDate:function(d,e,f){function g(){var a=this.slice(0,m[k].length),b=m[k].slice(0,a.length);return a.toLowerCase()===b.toLowerCase()}if(!d)return b;if(d instanceof Date)return d;"string"==typeof e&&(e=q.parseFormat(e));var h,i,k,l=/([\-+]\d+)([dmwy])/,m=d.match(/([\-+]\d+)([dmwy])/g);if(/^[\-+]\d+[dmwy]([\s,]+[\-+]\d+[dmwy])*$/.test(d)){for(d=new Date,k=0;k<m.length;k++)switch(h=l.exec(m[k]),i=parseInt(h[1]),h[2]){case"d":d.setUTCDate(d.getUTCDate()+i);break;case"m":d=j.prototype.moveMonth.call(j.prototype,d,i);break;case"w":d.setUTCDate(d.getUTCDate()+7*i);break;case"y":d=j.prototype.moveYear.call(j.prototype,d,i)}return c(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),0,0,0)}m=d&&d.match(this.nonpunctuation)||[],d=new Date;var n,o,r={},s=["yyyy","yy","M","MM","m","mm","d","dd"],t={yyyy:function(a,b){return a.setUTCFullYear(b)},yy:function(a,b){return a.setUTCFullYear(2e3+b)},m:function(a,b){if(isNaN(a))return a;for(b-=1;0>b;)b+=12;for(b%=12,a.setUTCMonth(b);a.getUTCMonth()!==b;)a.setUTCDate(a.getUTCDate()-1);return a},d:function(a,b){return a.setUTCDate(b)}};t.M=t.MM=t.mm=t.m,t.dd=t.d,d=c(d.getFullYear(),d.getMonth(),d.getDate(),0,0,0);var u=e.parts.slice();if(m.length!==u.length&&(u=a(u).filter(function(b,c){return-1!==a.inArray(c,s)}).toArray()),m.length===u.length){var v;for(k=0,v=u.length;v>k;k++){if(n=parseInt(m[k],10),h=u[k],isNaN(n))switch(h){case"MM":o=a(p[f].months).filter(g),n=a.inArray(o[0],p[f].months)+1;break;case"M":o=a(p[f].monthsShort).filter(g),n=a.inArray(o[0],p[f].monthsShort)+1}r[h]=n}var w,x;for(k=0;k<s.length;k++)x=s[k],x in r&&!isNaN(r[x])&&(w=new Date(d),t[x](w,r[x]),isNaN(w)||(d=w))}return d},formatDate:function(b,c,d){if(!b)return"";"string"==typeof c&&(c=q.parseFormat(c));var e={d:b.getUTCDate(),D:p[d].daysShort[b.getUTCDay()],DD:p[d].days[b.getUTCDay()],m:b.getUTCMonth()+1,M:p[d].monthsShort[b.getUTCMonth()],MM:p[d].months[b.getUTCMonth()],yy:b.getUTCFullYear().toString().substring(2),yyyy:b.getUTCFullYear()};e.dd=(e.d<10?"0":"")+e.d,e.mm=(e.m<10?"0":"")+e.m,b=[];for(var f=a.extend([],c.separators),g=0,h=c.parts.length;h>=g;g++)f.length&&b.push(f.shift()),b.push(e[c.parts[g]]);return b.join("")},headTemplate:'<thead><tr><th class="prev">&#171;</th><th colspan="5" class="datepicker-switch"></th><th class="next">&#187;</th></tr></thead>',contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'};q.template='<div class="datepicker"><div class="datepicker-days"><table class=" table-condensed">'+q.headTemplate+"<tbody></tbody>"+q.footTemplate+'</table></div><div class="datepicker-months"><table class="table-condensed">'+q.headTemplate+q.contTemplate+q.footTemplate+'</table></div><div class="datepicker-years"><table class="table-condensed">'+q.headTemplate+q.contTemplate+q.footTemplate+"</table></div></div>",a.fn.datepicker.DPGlobal=q,a.fn.datepicker.noConflict=function(){return a.fn.datepicker=l,this},a.fn.datepicker.version="1.4.1-dev",a(document).on("focus.datepicker.data-api click.datepicker.data-api",'[data-provide="datepicker"]',function(b){var c=a(this);c.data("datepicker")||(b.preventDefault(),m.call(c,"show"))}),a(function(){m.call(a('[data-provide="datepicker-inline"]'))})}(window.jQuery);
-
-// Languages: sv, nb, no, da, fi
-!function(a){a.fn.datepicker.dates.sv={days:["Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag"],daysShort:["Sön","Mån","Tis","Ons","Tor","Fre","Lör"],daysMin:["Sö","Må","Ti","On","To","Fr","Lö"],months:["Januari","Februari","Mars","April","Maj","Juni","Juli","Augusti","September","Oktober","November","December"],monthsShort:["Jan","Feb","Mar","Apr","Maj","Jun","Jul","Aug","Sep","Okt","Nov","Dec"],today:"Idag",format:"yyyy-mm-dd",weekStart:1,clear:"Rensa"}}(jQuery);
-!function(a){a.fn.datepicker.dates.fi={days:["sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"],daysShort:["sun","maa","tii","kes","tor","per","lau"],daysMin:["su","ma","ti","ke","to","pe","la"],months:["tammikuu","helmikuu","maaliskuu","huhtikuu","toukokuu","kesäkuu","heinäkuu","elokuu","syyskuu","lokakuu","marraskuu","joulukuu"],monthsShort:["tam","hel","maa","huh","tou","kes","hei","elo","syy","lok","mar","jou"],today:"tänään",clear:"Tyhjennä",weekStart:1,format:"d.m.yyyy"}}(jQuery);
-!function(a){a.fn.datepicker.dates.nb={days:["Søndag","Mandag","Tirsdag","Onsdag","Torsdag","Fredag","Lørdag"],daysShort:["Søn","Man","Tir","Ons","Tor","Fre","Lør"],daysMin:["Sø","Ma","Ti","On","To","Fr","Lø"],months:["Januar","Februar","Mars","April","Mai","Juni","Juli","August","September","Oktober","November","Desember"],monthsShort:["Jan","Feb","Mar","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Des"],today:"I Dag"}}(jQuery);
-!function(a){a.fn.datepicker.dates.no={days:["Søndag","Mandag","Tirsdag","Onsdag","Torsdag","Fredag","Lørdag"],daysShort:["Søn","Man","Tir","Ons","Tor","Fre","Lør"],daysMin:["Sø","Ma","Ti","On","To","Fr","Lø"],months:["Januar","Februar","Mars","April","Mai","Juni","Juli","August","September","Oktober","November","Desember"],monthsShort:["Jan","Feb","Mar","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Des"],today:"I dag",clear:"Nullstill",weekStart:1,format:"dd.mm.yyyy"}}(jQuery);
-!function(a){a.fn.datepicker.dates.da={days:["søndag","mandag","tirsdag","onsdag","torsdag","fredag","lørdag"],daysShort:["søn","man","tir","ons","tor","fre","lør"],daysMin:["sø","ma","ti","on","to","fr","lø"],months:["januar","februar","marts","april","maj","juni","juli","august","september","oktober","november","december"],monthsShort:["jan","feb","mar","apr","maj","jun","jul","aug","sep","okt","nov","dec"],today:"I Dag",clear:"Nulstil"}}(jQuery);
-
-
-var BBM = BBM || {};
-
-// caching some often used jQuery objects
-BBM.$ = {
-	win: $(window),
-	body: $('body')
-};
-
-// development boolean (used for loading example json instead of real data, and so on)
-BBM.dev = window.location.hostname == 'localhost' || window.location.hostname == 'oakwood.github.io';
-if (BBM.dev) {
-	// override asset path
-	staticAssets = window.location.hostname == 'oakwood.github.io' ? '/bonnierbusinessmedia/dagensmedicin/' : '/dagensmedicin/';
-}
 
 /* Include global BBM methods */
 var BBM = BBM || {};
@@ -3781,8 +3735,7 @@ BBM.carouselArticle = function() {
 			singleItem: true,
 			pagination: false,
 			autoHeight: true,
-			afterAction: afterAction,
-			lazyLoad: true
+			afterAction: afterAction
 		});
 
 		// step navigation
@@ -3794,7 +3747,6 @@ BBM.carouselArticle = function() {
 		});
 	});
 };
-
 var BBM = BBM || {};
 
 // WIDE SMALL ITEMS CAROUSEL
@@ -3830,52 +3782,44 @@ var BBM = BBM || {};
 
 BBM.lightbox = function() {
 	function handleLightboxState($lightbox) {
-		$lightbox.addClass('active');
-		$('template-').addClass('lightbox-active');
+	  	$lightbox.addClass('active');
+			$('template-').addClass('lightbox-active');
 
-		if($lightbox.hasClass('active')) {
-			$lightbox.on('click', function(event) {
-				var $target = $(event.target);
+	  	if($lightbox.hasClass('active')) {
+	  		$lightbox.on('click', function(event) {
+console.log('cl1');
+					var $target = $(event.target);
 
-				var isInsideLightBoxContent = $('.lightbox-content').has($target).length;
-				var isLightBoxContent = $target.hasClass('lightbox-content') || isInsideLightBoxContent ? true : false;
-				var isInsideCloseButton = $lightbox.find('[lightbox-close]').has($target).length;
-				var isCloseButton = $target.is('[lightbox-close]') || isInsideCloseButton ? true : false;
+					var isInsideLightBoxContent = $('.lightbox-content').has($target).length;
+					var isLightBoxContent = $target.hasClass('lightbox-content') || isInsideLightBoxContent ? true : false;
+					var isInsideCloseButton = $lightbox.find('[lightbox-close]').has($target).length;
+					var isCloseButton = $target.is('[lightbox-close]') || isInsideCloseButton ? true : false;
 
-				if(isLightBoxContent && !isCloseButton) {
-					return;
-				}
-				event.stopPropagation();
-				event.preventDefault();
+					if(isLightBoxContent && !isCloseButton) {
+						return;
+					}
+					event.stopPropagation();
 
-				$(this).removeClass('active');
-				$('body').removeClass('lightbox-active');
-				$(this).off('click');
-			});
-
-			$(document).on('keyup', function(e) {
-				if (e.keyCode == 27) { // escape == 27
-					$lightbox.removeClass('active');
+					$(this).removeClass('active');
 					$('body').removeClass('lightbox-active');
-					$lightbox.off('click');
-				}
-			});
+					$(this).off('click');
+				});
 	  	}
 	}
 
+	$( '.lightbox-caller' ).each(function() {
+	  $( this ).on('click', function(event){
+	  	event.preventDefault();
+
+	  	var $lightbox = $($(this).data('lightbox-wrapper'));
+			handleLightboxState($lightbox);
+	  });
+	});
 
 	var $activeStateLightbox = $('.lightbox-wrapper[load-state="active"]');
 	if($activeStateLightbox.length){
 		handleLightboxState($activeStateLightbox);
 	}
-
-	// existing lightbox markup
-	$('body').on('click', '.lightbox-caller' , function(event) {
-		event.preventDefault();
-
-		var $lightbox = $($(this).data('lightbox-wrapper'));
-		handleLightboxState($lightbox);
-	});
 
 	// image opener
 	$('body').on('click', '[data-lightbox-image]', function(e) {
@@ -3894,35 +3838,12 @@ BBM.lightbox = function() {
 		}
 
 		var $img = $lightbox.find('img');
-		$img.attr('src', $(this).data('lightbox-image'));
+		$img.attr('src', $(this).data('lightbox-image'))
 
 		$lightbox.appendTo('body');
 		handleLightboxState($lightbox);
 
 	});
-
-
-	// custom content opener
-	$('body').on('click', '[data-lightbox-content]', function(e) {
-		e.preventDefault();
-		var $lightbox = $('.lightbox-custom');
-
-		if (!$lightbox.length) {
-			$lightbox = $(
-				'<div class="lightbox-wrapper lightbox-custom">' +
-					'<div class="lightbox-wrapper-table">' +
-						'<div class="lightbox-wrapper-cell">' +
-							'<div class="lightbox-content">' +
-								'<div class="lightbox-close" lightbox-close><button>Close</button></div>' +
-								$(this).data('lightbox-content') +
-				'</div></div></div></div>');
-		}
-
-		$lightbox.appendTo('body');
-		handleLightboxState($lightbox);
-
-	});
-
 };
 
 var BBM = BBM || {};
@@ -3935,7 +3856,6 @@ BBM.toggleActive = function() {
 		$(target).toggleClass('active');
 	});
 };
-
 var BBM = BBM || {};
 
 BBM.toggleCollapse = function() {
@@ -4022,8 +3942,6 @@ BBM.responsiveAdtoma = {
 
 		var self = this,
 			state = BBM.responsiveEvents.currentState;
-		
-		self.log('loadAdtoma', Date.now());
 
 		$('[data-adtoma-' + state + ']').each(function () {
 			var space = $(this).data('adtoma-' + state);
@@ -4076,24 +3994,14 @@ BBM.responsiveAdtoma = {
 
 	loadLayoutZone: function() {
 		// needed to get around weird adtoma callback context
-		//var self = BBM.responsiveAdtoma;
-		var self = this;
+		var self = BBM.responsiveAdtoma;
 		if ($.isEmptyObject(self.unloadedAds)) return;
 
 
 		// timeout to avoid separate adtoma calls overwriting itself
-		var timeout = setTimeout(function () {
-			clearTimeout(timeout);
-
+		setTimeout(function () {
 			var key = Object.keys(self.unloadedAds)[0],
 				layoutZone = self.unloadedAds[key];
-
-			self.log('Try load layoutZone', Date.now(), key, self.unloadedAds);
-			if ( ! layoutZone || ! layoutZone.layout ) {
-				console.log('No layout found');
-				return;
-			}
-			self.log('Loading', layoutZone.layout,layoutZone.mediaZone, Date.now());
 
 			window.Fusion.layout = layoutZone.layout;
 			window.Fusion.mediaZone = layoutZone.mediaZone;
@@ -4102,16 +4010,14 @@ BBM.responsiveAdtoma = {
 			// load ads
 			self.currentLoadingAds = layoutZone.ads;
 
-			self.log('Go, Fusion.loadAds', self.currentLoadingAds);
 			window.Fusion.loadAds(true, function(){
+				var self = BBM.responsiveAdtoma;
 				$('.module-banner div [id]').attr('id', '');
 				$('.module-banner div script').remove();
 
 				$.each(self.currentLoadingAds, function (i, ad) {
-					self.log('Go, Fusion.updateSpace', ad.id, ad.space);
 					window.Fusion.updateSpace(ad.id, ad.space);
 				});
-				self.currentLoadingAds = null;
 
 				delete self.unloadedAds[key];
 				self.loadLayoutZone();
@@ -4119,11 +4025,6 @@ BBM.responsiveAdtoma = {
 			});
 		}, 200);
 
-	},
-
-	log: function() {
-		if ( this.logIt )
-			console.log(arguments);
 	},
 
 	responsiveLoader: function () {
@@ -4143,573 +4044,9 @@ BBM.responsiveAdtoma = {
 
 	}
 };
-var BBM = BBM || {};
-
-BBM.bar = function() {
-	var barActive = true;
-	var $bar = $('.widget-article-bar');
-	var $barInner = $('.widget-article-bar-inner');
-	var $barClose = $('.widget-article-bar-close');
-
-	onClick = function() {
-		$barInner.removeClass('widget-article-bar-inner--fixed');
-		barActive = false;
-	};
-
-	onScroll = function() {
-		if (barActive) {
-			if ($(window).scrollTop() + $(window).height() >= $bar.offset().top) {
-				$barInner.addClass('widget-article-bar-inner--fixed');
-			} else {
-				$barInner.removeClass('widget-article-bar-inner--fixed');
-			}
-		}
-	};
-
-	if ($bar.length > 0) {
-		$(window).on('scroll', $.debounce(300, onScroll));
-		$barClose.on('click', onClick);
-	}
-};
-
-var BBM = BBM || {};
-
-BBM.ajaxComments = {
-	load: function (endpoint, $target) {
-		// load article
-		$.getJSON(
-			endpoint,
-			{ "_cachebuster_": $.now() },
-			function(data) {
-				// get user login state
-				if (typeof resume != "undefined") data.user = resume.user;
-				else if (typeof dagensmedicin != "undefined") data.user = dagensmedicin.user;
-
-				// format comment count string
-				if (!data.commentsCount) data.commentsCount = 'Inga kommentarer ännu!';
-				else if (data.commentsCount == 1) data.commentsCount = 'En kommentar';
-				else data.commentsCount += ' kommentarer';
-
-				// load mustache template (hopefully cached)
-				$.get(staticAssets + 'mustache/comments.mst', function(template) {
-					// render template
-					var rendered = Mustache.render(template, data);
-
-					// inject to dom
-					$target.html(rendered);
-
-				}).fail(function() {
-					console.log('template fetch failed :(');
-				});
-
-			}
-		).fail(function() {
-			console.log('json fetch failed :(');
-		});
-	},
-
-	post: function($form) {
-		$form.find('button').addClass('loading');
-
-		$.post($form.attr('action'), $form.serialize(), function() {
-			var $parent = $form.closest('.comments');
-
-			// todo: fix this
-			$parent.find('.comments-toggle').click().click();
-			console.log('posted');
-		});
-	},
-
-	buttonSwapText: function($button) {
-		var textSwap = $button.text();
-		$button.text($button.data('toggle-text'));
-		$button.data('toggle-text', textSwap);
-	},
-
-	init: function() {
-		var self = this;
-
-		BBM.$.body.on('click', '.comments-toggle', function (e) {
-			e.preventDefault();
-			// open comments
-			var $button = $(this),
-				state = $button.data('state');
-
-			if (state != 'open') {
-				var	$target = $('<div class="comments-ajax-wrapper"></div>').insertAfter(this),
-					endpoint = $button.data('comments-endpoint');
-
-				self.load(endpoint, $target);
-				$button.data('state', 'open').addClass('active');
-				self.buttonSwapText($button);
-
-			} else {
-				$button.next().remove();
-				$button.data('state', 'closed').removeClass('active');
-				self.buttonSwapText($button);
-			}
-
-		}).on('submit', '.comments-form', function(e) {
-			// submit comment
-			e.preventDefault();
-			var $form = $(this);
-			self.post($form);
-
-		}).on('click', '.comment-report', function(e) {
-			// open report form
-			e.preventDefault();
-
-			var $parent = $(this).closest('.comment-post'),
-				commentId = $(this).data('report-comment');
-
-			$parent.html('<form action="/api/comments/report" class="form comment-report-form">' +
-				'<input type="hidden" name="CommentId" value="' + commentId + '">' +
-				'<textarea name="Message" placeholder="Ange varför du uppfattar denna kommentar som olämplig"></textarea>' +
-				(window.resume.user.loggedIn ? '' : '<input type="email" name="Email" placeholder="Din epost (frivilligt)">') +
-				'<button class="btn">Skicka anmälan</button></form>');
-
-		}).on('submit', '.comment-report-form', function(e) {
-			// submit report
-			e.preventDefault();
-			var $form = $(this);
-
-			$.post($form.attr('action'), $form.serialize(), function() {
-				$form.html('<h4>Tack så mycket!</h4><p>Vi ska utvärdera om kommentaren följer våra riktlinjer.</p>');
-			});
-		});
-
-	}
-};
-
-var BBM = BBM || {};
-
-BBM.getScrollbarWidth = function() {
-    var outer = document.createElement("div");
-    outer.style.visibility = "hidden";
-    outer.style.width = "100px";
-    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-    document.body.appendChild(outer);
-
-    var widthNoScroll = outer.offsetWidth;
-    // force scrollbars
-    outer.style.overflow = "scroll";
-
-    // add innerdiv
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);        
-
-    var widthWithScroll = inner.offsetWidth;
-
-    // remove divs
-    outer.parentNode.removeChild(outer);
-
-    return widthNoScroll - widthWithScroll;
-};
-
-/* Tools */
-var BBM = BBM || {};
-
-BBM.audioPlayer = {
-
-	metaData: function () {
-		var audio = $('.audio');
-
-		audio.on('loadedmetadata', function() {
-
-			var duration = this.duration;
-			var minutes = "0" + Math.floor(duration / 60);
-			var seconds = "0" +  Math.floor(duration - minutes * 60);
-			var audioDuration = minutes.substr(-2) + ":" + seconds.substr(-2);
-
-			$(".duration").html(audioDuration);
-
-		});
-	},
-
-	timeUpdate: function () {
-		var audio = $('.audio');
-
-		audio.on('timeupdate', function() {
-			var currentPos = audio[0].currentTime;
-			var maxduration = audio[0].duration;
-			var percentage = 100 * currentPos / maxduration;
-
-			$('.timeBar').css('width', percentage+'%');
-
-			var currentSeconds = (Math.floor(currentPos % 60) < 10 ? '0' : '') + Math.floor(currentPos % 60);
-			var currentMinutes = Math.floor(currentPos / 60);
-
-			$(".current").html(currentMinutes + ':' + currentSeconds);
-		});
-	},
-
-	updateProgressbar: function () {
-
-		var timeDrag = false;
-
-		$('.progressBar').mousedown(function(e) {
-			timeDrag = true;
-			updatebar(e.pageX);
-		});
-
-		$(document).mouseup(function(e) {
-			if(timeDrag) {
-				timeDrag = false;
-				updatebar(e.pageX);
-			}
-		});
-
-		$(document).mousemove(function(e) {
-			if(timeDrag) {
-				updatebar(e.pageX);
-			}
-		});
-
-		var audio = $('.audio');
-
-		//update Progress Bar control
-		var updatebar = function(x) {
-		var progress = $('.progressBar');
-		var maxduration = audio[0].duration;
-		var position = x - progress.offset().left;
-		var percentage = 100 * position / progress.width();
-
-		//Check within range
-		if(percentage > 100) {
-			percentage = 100;
-		}
-
-		if(percentage < 0) {
-			percentage = 0;
-		}
-
-		//Update progress bar and audio currenttime
-		$('.timeBar').css('width', percentage+'%');
-			audio[0].currentTime = maxduration * percentage / 100;
-		};
-
-	},
-
-	play: function () {
-		var audio = $('.audio');
-
-		this.metaData();
-		this.timeUpdate();
-
-		$('.play').on('click', function() {
-			event.preventDefault();
-			$(this).toggleClass('pause');
-
-			if(audio[0].paused) {
-				audio[0].play();
-			} else {
-				audio[0].pause();
-			}
-
-			return false;
-		});
-	},
-
-	init: function () {
-		this.play();
-		this.updateProgressbar();
-	}
-};
-
-
-
-
-var BBM = BBM || {};
-
-BBM.readingListDM = {
-	current: 0,
-	$wrap: null,
-	$list: null,
-	$articles: null,
-
-	setSticky: function() {
-		$('.quicklook-wrapper .article-sidebar-sticky').stick_in_parent({
-			offset_top: 66,
-			recalc_every: 10
-		});
-
-		BBM.$.body.on('load', function() {
-			BBM.$.body.trigger("sticky_kit:recalc");
-		});
-	},
-
-	setCurrent: function(index) {
-		this.current = index;
-
-		var $item = this.$list.eq(this.current),
-			$article = this.$wrap.children().eq(this.current),
-			 url = $item.attr('href'),
-			 title = $item.text();
-
-		// set current class
-		$item.parent().addClass('current').siblings().removeClass('current');
-
-		// replace history
-		window.history.replaceState("", "", url);
-
-		// load article
-		if ($article.hasClass('loading')) {
-			BBM.loadJsonArticle(url, this.$articles.eq(index), function(data) {
-				BBM.asyncLoaded();
-				//BBM.stickySocialButtons.setURL(url, title);
-
-				if ( data.meter == 'true' ) {
-					$('.lightbox-content-meter').addClass('active');
-					BBM.readingListDM.$articles = [];
-
-				} else {
-					//do nothing
-				}
-
-			});
-
-			// remove to not load again
-			$article.removeClass('loading');
-		} else {
-			BBM.asyncLoaded();
-		}
-	},
-
-	scroll: function() {
-		if (!this.$articles.length) return;
-
-		var currentPos = BBM.readingListDM.$wrap.children().eq(this.current)[0].getBoundingClientRect(),
-			breakPoint = window.innerHeight * 0.9;
-
-		if (this.current && currentPos.top > breakPoint) {
-			this.setCurrent(this.current - 1);
-
-		} else if (this.current < (this.$list.length - 1) && currentPos.bottom + 60 <= breakPoint) {
-			this.setCurrent(this.current + 1);
-		}
-	},
-
-	placeholders: function() {
-		var self = this;
-
-		self.$list.each(function(i) {
-			if (i) {
-				var $item = $(this);
-				self.$wrap.append('<article class="article-full loading"><h1>' + $item.text() + '</h1></article>');
-			}
-		});
-
-		this.$articles = this.$wrap.children();
-	},
-
-	scrollListen: function(el) {
-		el.off('.readinglist').on('scroll.readinglist', $.proxy(this.scroll, this));
-	},
-
-	init: function () {
-		this.$wrap = $('.article-wrapper');
-		this.$list = $('.reading-list a');
-
-		// don't initiate twice in reading list
-		if (this.$list.data('initiated') == true) return;
-
-		if ( this.$list.length ) {
-			// direct access url, fancy sticky sidebar and scroll event on window
-			this.setSticky();
-			this.scrollListen(BBM.$.win);
-
-		}
-
-		this.$list.data('initiated', true);
-		this.placeholders();
-
-	}
-};
-
-var BBM = BBM || {};
-
-BBM.loadJsonArticle = function (url, $target, callback) {
-	if (BBM.dev) {
-		// override url for dev
-		url = staticAssets + 'mustache/' + url.replace('.html', '.json');
-	} else {
-		// strip hash, append json query
-		var hash = url.indexOf('#');
-		if (hash > 0) url = url.substr(0, hash);
-
-		url = url + (url.indexOf('?') < 0 ? '?' : '&') + 'format=json';
-	}
-
-	// load article
-	$.getJSON(url, function(data) {
-		// load mustache template (hopefully cached)
-		//console.log('use template: ' + data.template);
-		var templateUrl = staticAssets + 'mustache/' + data.template + '.mst';
-		$.get(templateUrl, function(template) {
-			// render template
-			var rendered = Mustache.render(template, data);
-
-			// inject to dom
-			$target.replaceWith(rendered);
-
-			if ( BBM.stickySocialButtons )
-				BBM.stickySocialButtons.updateHTML(rendered);
-
-			if (callback) callback(data, rendered);
-
-		}).fail(function() {
-			console.log('template fetch failed :(', templateUrl);
-		});
-
-	}).fail(function() {
-		console.log('json fetch failed :(', url);
-	});
-};
-
-
-var BBM = BBM || {};
-
-// Adtoma
-BBM.responsiveAdtoma = {
-	adtomaId: 0,
-	logIt: false,
-	unloadedAds: {},
-	loadAdtoma: function () {
-		if (typeof window.Fusion != 'object') return; 
-
-		// remove ID from loaded banners to avoid conflict (especially in quicklook and readinglist)
-		$('.module-banner div [id]').attr('id', '');
-
-		var self = this,
-			state = BBM.responsiveEvents.currentState;
-		
-		self.log('loadAdtoma', Date.now());
-
-		$('[data-adtoma-' + state + ']').each(function () {
-			var space = $(this).data('adtoma-' + state);
-
-			// remove data attr to prevent loading multiple times
-			$(this).removeAttr('data-adtoma-' + state);
-
-			// store and create container only if it actually has a space specified
-			if (space) {
-				var id = 'adtoma' + self.adtomaId,
-					$div = $('<div />').attr('id', id).appendTo(this);
-
-				// set hidden classes
-				$div.addClass((state == 'desktop' ? 'mobile' : 'desktop') + '-hidden');
-
-				// store in array to load from adtoma
-				var split = space.split(":"),
-					layout = adtomaLayouts[state],
-					mediaZone = adtomaMediazones[state];
-
-				if (split.length == 3) {
-					if (split[0].length) layout = split[0];
-					if (split[1].length) mediaZone = split[1];
-					space = split[2];
-				} else if (split.length == 2) {
-					if (split[0].length) mediaZone = split[0];
-					space = split[1];
-				}
-
-				var layoutZone = layout + mediaZone;
-
-				// create and store object
-				self.unloadedAds[layoutZone] = self.unloadedAds[layoutZone] || {layout: layout, mediaZone: mediaZone, ads: []};
-				self.unloadedAds[layoutZone].ads.push({id: id, space: space});
-				self.adtomaId++;
-
-				if (self.logIt) {
-					console.group('Anropar adtoma');
-					console.log('window.Fusion.layout: ' + layout);
-					console.log('window.Fusion.mediaZone: ' + mediaZone);
-					console.log('space: ' + space);
-					console.log('element ID: ' + id);
-					console.groupEnd();
-				}
-			}
-		});
-
-		self.loadLayoutZone();
-	},
-
-	loadLayoutZone: function() {
-		// needed to get around weird adtoma callback context
-		//var self = BBM.responsiveAdtoma;
-		var self = this;
-		if ($.isEmptyObject(self.unloadedAds)) return;
-
-
-		// timeout to avoid separate adtoma calls overwriting itself
-		var timeout = setTimeout(function () {
-			clearTimeout(timeout);
-
-			var key = Object.keys(self.unloadedAds)[0],
-				layoutZone = self.unloadedAds[key];
-
-			self.log('Try load layoutZone', Date.now(), key, self.unloadedAds);
-			if ( ! layoutZone || ! layoutZone.layout ) {
-				console.log('No layout found');
-				return;
-			}
-			self.log('Loading', layoutZone.layout,layoutZone.mediaZone, Date.now());
-
-			window.Fusion.layout = layoutZone.layout;
-			window.Fusion.mediaZone = layoutZone.mediaZone;
-			window.Fusion.adonLoad = false;
-
-			// load ads
-			self.currentLoadingAds = layoutZone.ads;
-
-			self.log('Go, Fusion.loadAds', self.currentLoadingAds);
-			window.Fusion.loadAds(true, function(){
-				$('.module-banner div [id]').attr('id', '');
-				$('.module-banner div script').remove();
-
-				$.each(self.currentLoadingAds, function (i, ad) {
-					self.log('Go, Fusion.updateSpace', ad.id, ad.space);
-					window.Fusion.updateSpace(ad.id, ad.space);
-				});
-				self.currentLoadingAds = null;
-
-				delete self.unloadedAds[key];
-				self.loadLayoutZone();
-
-			});
-		}, 200);
-
-	},
-
-	log: function() {
-		if ( this.logIt )
-			console.log(arguments);
-	},
-
-	responsiveLoader: function () {
-		var self = this;
-
-		if (!BBM.$.win) BBM.$.win = $(window);
-
-		BBM.$.win.on('enterDesktop enterMobile', function () {
-			self.loadAdtoma();
-		});
-
-	},
-
-	init: function () {
-		if (window.location.hash == '#adlog') this.logIt = true;
-		this.responsiveLoader();
-
-	}
-};
-
 
 
 /* Site specific stuff */
-BBM.readingListDM.init();
 BBM.headerMenu.init();
 BBM.headerSticky();
 BBM.mobileNavigation();
@@ -4720,66 +4057,22 @@ BBM.lightbox();
 BBM.toggleActive();
 BBM.toggleCollapse();
 BBM.responsiveAdtoma.init();
-BBM.bar();
-BBM.audioPlayer.init();
-BBM.ajaxComments.init();
 
-	$( '.select2' ).select2({
-		placeholder: '',
-		minimumResultsForSearch: -1
-	});
 
-	BBM.stickyElements = function() {
-		$('.article-sidebar-sticky').stick_in_parent({
-			offset_top: 95,
-			recalc_every: 1
-		});
+$( '.select2' ).select2({
+	placeholder: '',
+	minimumResultsForSearch: -1
+});
 
-		$('.article-employerbranding-title').stick_in_parent({
-			offset_top: document.body.clientWidth > 910 ? 80 : 0,
-			recalc_every: 1,
-		});
-	}
 
-	// stuff to run when content is loaded async (quicklook, readinglist, comments)
-	BBM.trackPageview = function() {
-		var url = document.location.href;
+$('.widget-article-share .share-scroll a').on('click', function(event){
+	event.preventDefault();
 
-		if (typeof ga == 'function') {
-			ga('send', 'pageview', {
-				location: url
-			});
-		}
-		if (typeof pSUPERFLY == "object") {
-			pSUPERFLY.virtualPage(url);
-		}
-		if (typeof asyncBurtTracking == "function") {
-			asyncBurtTracking();
-		}
-	};
-
-	BBM.asyncLoaded = function() {
-		BBM.readingListDM.init(true);
-		BBM.stickyElements();
-
-		BBM.responsiveAdtoma.loadAdtoma();
-	};
-
-	$('.widget-article-share .share-scroll a').on('click', function(event){
-		event.preventDefault();
-
-		var scrollTo = $('#comments');
-		$('html,body').animate({scrollTop: scrollTo.offset().top});
-	});
-
-	$('.pie').each(function (index, value){
-		var p = parseFloat(value.textContent);
-		value.style.animationDelay = '-' + p + 's';
-	});
+	var scrollTo = $('#comments');
+	$('html,body').animate({scrollTop: scrollTo.offset().top});
+});
 
 
 // run responsive events last
 BBM.responsiveEvents.init();
-BBM.stickyElements();
-
 
