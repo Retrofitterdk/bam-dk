@@ -495,6 +495,8 @@ img { max-width: 100%; height: auto; }
 .row, .teaser, .teaser-grid, .teaser-grid-alternative-color, .teaser-thin, .teaser-biggest { display: table; table-layout: fixed; width: 100%; }
 .row .col, .teaser .col, .teaser-grid .col, .teaser-grid-alternative-color .col, .teaser-thin .col, .teaser-biggest .col { display: table-cell; vertical-align: top; }
 .row .col.left { text-align: left; }
+.row .col.right { text-align: right; }
+.row.search-result { margin-bottom: 0; }
 
 
 .icon-arrow-left, .icon-arrow-left-blue, .widget-carousel .controls .prev, .icon-arrow-left-green, .icon-arrow-right, .widget-jobs .widget-footer .next, .widget-job-subscriptions .widget-footer .next, .btn-user:after, .template-quiz .quiz-submit:after, .icon-arrow-right-blue, .widget-carousel .controls .next, .icon-arrow-right-green { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJNJREFUeNpi+P//PwOROBqIdwMxF4hPrCY/IP77HwK2AzEbsZp+/UcFGwlp8sKiCQQy8WlyAuJvWDRV4PMjXk24NJrj0NSArA6bpo9YNHWgW4DMMSVWE7JGXSB+jUXTdFyBR0gTIz6N17BoAokx4Ytjimwk248UhSpF8UhRyqEorVKUOyjKjxSVABSVOVhLOYAAAwD2gjUJDLhrqAAAAABJRU5ErkJggg==); background-repeat: no-repeat; background-position: 50% 50%; background-size: 100% auto; }
